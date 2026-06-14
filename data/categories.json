@@ -1,0 +1,580 @@
+[
+  {
+    "id": "1",
+    "slug": "angel-tattoo",
+    "name": "Angel Tattoo",
+    "description": "Divine and celestial angel designs symbolizing protection, hope, and spirituality.",
+    "image": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=800&q=80",
+    "count": 24,
+    "intro": "Angel tattoos are among the most timeless and deeply meaningful tattoo styles. Rooted in spiritual and religious traditions, they represent divine protection, guidance, and the presence of a higher power. At Ink Rise, our artists craft angel tattoos with extraordinary detail — from delicate linework wings to hyper-realistic guardian angel portraits.",
+    "meaning": "Angels symbolize protection from harm, spiritual guidance, hope in dark times, and a connection to loved ones who have passed. Many choose angel tattoos as memorial pieces or to represent their faith journey. The imagery transcends religion, appearing across Christianity, Islam, Judaism, and New Age spirituality alike.",
+    "types": [
+      { "name": "Guardian Angel", "description": "A protective figure watching over the wearer, often depicted with spread wings and a serene expression." },
+      { "name": "Fallen Angel", "description": "A dramatic, powerful design showing an angel fallen from grace — popular for its emotional depth and cinematic appeal." },
+      { "name": "Archangel", "description": "Detailed depictions of Archangels like Michael, Gabriel, or Raphael, often with armor and divine weapons." },
+      { "name": "Baby Angel (Cherub)", "description": "Soft, innocent cherub designs often used as memorial tattoos for lost children or as symbols of innocence." },
+      { "name": "Angel Wings", "description": "Wing-only designs ranging from delicate feather wings to bold, spread eagle-like wings across the back." },
+      { "name": "Realistic Portrait Angel", "description": "A human face given angelic features — halos, wings, and ethereal lighting — creating a breathtaking portrait piece." }
+    ],
+    "placements": [
+      { "area": "Back", "reason": "Ideal for large, detailed angel or wing designs that need maximum canvas space." },
+      { "area": "Chest", "reason": "Close to the heart — perfect for memorial angel tattoos and guardian angel designs." },
+      { "area": "Arm / Sleeve", "reason": "Great for flowing angel compositions that work with the arm's natural shape." },
+      { "area": "Shoulder", "reason": "Natural fit for single-wing or ascending angel designs." },
+      { "area": "Thigh", "reason": "Larger canvas for detailed angel portraits with clouds or celestial backgrounds." }
+    ],
+    "painLevel": { "score": 6, "description": "Moderate pain level. Chest and ribs are more sensitive; arms and thighs are more comfortable." },
+    "pricing": {
+      "small": "₹3,000 – ₹6,000",
+      "medium": "₹7,000 – ₹15,000",
+      "large": "₹18,000 – ₹40,000+",
+      "note": "Pricing depends on detail, size, and placement. Book a free consultation for an exact quote."
+    },
+    "designIdeas": [
+      "Realistic guardian angel with golden halo, holding a sword",
+      "Minimalist single wing on the collarbone",
+      "Fallen angel with torn wings and chains",
+      "Angel with a name scroll memorial piece",
+      "Archangel Michael defeating a demon (full back piece)",
+      "Baby angel (cherub) with roses"
+    ],
+    "faqs": [
+      { "q": "How long does an angel tattoo take?", "a": "A small angel tattoo (3–4 inches) takes 2–3 hours. A large back piece can take multiple sessions of 4–6 hours each." },
+      { "q": "Can you do hyper-realistic angel portraits?", "a": "Yes! Our artist Aryan Sharma specializes in hyper-realistic portrait tattoos including memorial angel pieces." },
+      { "q": "Do angel tattoos hold their detail over time?", "a": "Yes, with proper aftercare and occasional touch-ups every few years, angel tattoos retain excellent detail." }
+    ]
+  },
+  {
+    "id": "2",
+    "slug": "animal-tattoo",
+    "name": "Animal Tattoo",
+    "description": "From fierce wolves to delicate butterflies — wildlife art etched in stunning detail.",
+    "image": "https://images.unsplash.com/photo-1565728744382-61accd4aa148?w=800&q=80",
+    "count": 38,
+    "intro": "Animal tattoos are a celebration of the wild, the fierce, and the beautiful. They connect us to nature, to spirit animals, and to the primal energy that lives within all of us. At Ink Rise, we bring animals to life on skin with photorealistic shading, expressive linework, and compositions that capture each creature's essence.",
+    "meaning": "Animals in tattoo art carry deep symbolic meaning across cultures. A lion represents courage and royalty. A wolf signifies loyalty and freedom. An owl embodies wisdom. A snake suggests transformation and rebirth. Your chosen animal often reflects your personal journey, heritage, or the qualities you most admire.",
+    "types": [
+      { "name": "Realistic Wildlife", "description": "Photorealistic portraits of lions, tigers, wolves, bears, and eagles with incredible detail." },
+      { "name": "Geometric Animal", "description": "Animals constructed from geometric shapes — triangles, hexagons, and sacred geometry patterns." },
+      { "name": "Watercolor Animal", "description": "Loose, painterly animal designs with splashes of vibrant color bleeding into each other." },
+      { "name": "Tribal Animal", "description": "Bold black tribal patterns shaped into animal silhouettes." },
+      { "name": "Neo-Traditional Animal", "description": "Bold outlines with rich shading, ornate details, and a vintage-poster quality." },
+      { "name": "Minimalist Animal", "description": "Simple, clean outlines capturing the essence of an animal in just a few strokes." }
+    ],
+    "placements": [
+      { "area": "Chest / Sternum", "reason": "Lions and eagles look powerful centered on the chest." },
+      { "area": "Forearm", "reason": "Great for medium-sized animals, visible and impressive." },
+      { "area": "Thigh", "reason": "Large canvas for detailed wildlife scenes." },
+      { "area": "Calf", "reason": "Cylindrical shape works well for animal wrap-around designs." },
+      { "area": "Back", "reason": "Best for large, epic wildlife pieces — bear, elephant, or wolf pack scenes." }
+    ],
+    "painLevel": { "score": 5, "description": "Generally moderate. Ribs and chest are more painful; forearm and thigh are among the easiest." },
+    "pricing": {
+      "small": "₹2,500 – ₹5,000",
+      "medium": "₹6,000 – ₹14,000",
+      "large": "₹16,000 – ₹35,000+",
+      "note": "Realistic shading and fine detail add to session time and cost."
+    },
+    "designIdeas": [
+      "Roaring lion portrait with crown",
+      "Geometric wolf head in triangle",
+      "Realistic tiger eye close-up",
+      "Owl perched on a branch with moon background",
+      "Eagle in flight with spread wings",
+      "Snake coiled around a rose"
+    ],
+    "faqs": [
+      { "q": "Which animal designs are most popular?", "a": "Lions, wolves, eagles, tigers, and owls are our most requested animal tattoos." },
+      { "q": "Can I add my pet's portrait as an animal tattoo?", "a": "Absolutely! Pet portraits are a beautiful way to honor your animal companion. Bring a clear reference photo." },
+      { "q": "Do geometric animal tattoos age well?", "a": "Yes — clean geometric lines and solid fills hold up extremely well over decades." }
+    ]
+  },
+  {
+    "id": "3",
+    "slug": "arm-band-tattoo",
+    "name": "Arm Band Tattoo",
+    "description": "Elegant bands and bracelets that wrap around your arm in perfect symmetry.",
+    "image": "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=800&q=80",
+    "count": 19,
+    "intro": "Arm band tattoos are a stunning and versatile choice that wraps seamlessly around your wrist, forearm, or upper arm. Whether you prefer bold black tribal bands, delicate floral garlands, or intricate mandala patterns, arm bands create a bracelet-like effect that's elegant and eye-catching without requiring a large canvas.",
+    "meaning": "Arm bands have roots in warrior cultures worldwide — from Polynesian tribal warriors to Celtic warriors. They often symbolize strength, status, protection, and commitment. Today, they're chosen for their aesthetic beauty and the way they frame the arm with intention.",
+    "types": [
+      { "name": "Tribal Band", "description": "Bold Polynesian or Maori-inspired patterns with cultural significance and striking visual impact." },
+      { "name": "Floral Band", "description": "A delicate garland of roses, lotus flowers, or wildflowers wrapping around the arm." },
+      { "name": "Geometric Band", "description": "Precise geometric patterns — dotwork, mandalas, and Sacred Geometry forming a continuous band." },
+      { "name": "Celtic Knotwork Band", "description": "Interlocking Celtic knots symbolizing eternity and the interconnectedness of all things." },
+      { "name": "Dotwork Band", "description": "Thousands of dots forming gradients, mandalas, and mandala-inspired patterns." },
+      { "name": "Script / Quote Band", "description": "A meaningful phrase or quote written in a continuous band around the wrist or arm." }
+    ],
+    "placements": [
+      { "area": "Wrist", "reason": "Thin, delicate bands look beautiful as permanent bracelets." },
+      { "area": "Forearm", "reason": "Most popular location — visible, impressive, and great for detail work." },
+      { "area": "Upper Arm / Bicep", "reason": "Bold, wider bands look powerful on the upper arm." },
+      { "area": "Ankle", "reason": "Ankle bands work as elegant permanent anklets." },
+      { "area": "Calf", "reason": "Great for wider, more detailed band designs." }
+    ],
+    "painLevel": { "score": 4, "description": "Generally comfortable. Wrist bones and inner arm can be more sensitive." },
+    "pricing": {
+      "small": "₹2,000 – ₹4,000",
+      "medium": "₹5,000 – ₹10,000",
+      "large": "₹12,000 – ₹22,000+",
+      "note": "Price depends on width, detail complexity, and number of passes needed."
+    },
+    "designIdeas": [
+      "Polynesian tribal forearm band",
+      "Roses and thorns wrist bracelet",
+      "Mandala dotwork upper arm band",
+      "Celtic knot calf band",
+      "Mountain silhouette landscape band",
+      "Geometric diamond pattern wrist band"
+    ],
+    "faqs": [
+      { "q": "Do arm bands distort over time?", "a": "Well-executed arm bands by experienced artists maintain their symmetry. Avoid bands that cross major joints to preserve alignment." },
+      { "q": "How wide can an arm band be?", "a": "They range from a simple 5mm line to broad 5–6 inch decorative bands. The size depends on your arm and the design chosen." },
+      { "q": "Can you connect an arm band to a sleeve?", "a": "Absolutely! An arm band can be a beautiful anchor piece for a growing sleeve tattoo." }
+    ]
+  },
+  {
+    "id": "4",
+    "slug": "butterfly-tattoo",
+    "name": "Butterfly Tattoo",
+    "description": "Symbolizing transformation and beauty, our butterfly designs range from realistic to abstract.",
+    "image": "https://images.unsplash.com/photo-1602524205912-3b9d11c5a9ca?w=800&q=80",
+    "count": 31,
+    "intro": "Butterfly tattoos are among the most beloved tattoo designs globally, and for good reason. Their natural symmetry, vibrant color potential, and profound symbolism make them a perfect canvas for artistic expression. At Ink Rise, we craft butterflies that feel alive — wings that seem to flutter, colors that glow, and compositions that feel effortlessly elegant.",
+    "meaning": "The butterfly is a universal symbol of transformation, growth, and rebirth. Emerging from a chrysalis, it represents overcoming struggles and evolving into your truest self. It also symbolizes beauty, freedom, femininity, and the soul's journey — making it deeply personal for every individual who chooses it.",
+    "types": [
+      { "name": "Realistic Butterfly", "description": "Photorealistic butterflies with precise wing patterns, textures, and shading." },
+      { "name": "Watercolor Butterfly", "description": "Soft, dreamy watercolor backgrounds with loose pigment washes framing a delicate butterfly." },
+      { "name": "Geometric Butterfly", "description": "Symmetrical butterfly wings constructed from geometric shapes and mandala patterns." },
+      { "name": "Skull Butterfly", "description": "A fusion of butterflies and skulls — symbolizing the cycle of life and death." },
+      { "name": "Neo-Traditional Butterfly", "description": "Bold outlined butterflies with rich, layered shading and ornate floral accents." },
+      { "name": "Minimalist Butterfly", "description": "Clean, single-line or dot-work butterflies for a subtle, elegant look." }
+    ],
+    "placements": [
+      { "area": "Upper Back / Shoulders", "reason": "Natural wing-spread composition that flows beautifully across the shoulder blades." },
+      { "area": "Collarbone", "reason": "Delicate placement that frames the neckline elegantly." },
+      { "area": "Wrist / Forearm", "reason": "Looks like a butterfly has landed on your skin." },
+      { "area": "Hip / Ribs", "reason": "Feminine and intimate placement for larger designs." },
+      { "area": "Ankle / Foot", "reason": "Small to medium butterflies look stunning in this delicate area." }
+    ],
+    "painLevel": { "score": 4, "description": "Relatively low to moderate. Ribcage placement is the most painful butterfly location." },
+    "pricing": {
+      "small": "₹2,000 – ₹4,000",
+      "medium": "₹5,000 – ₹12,000",
+      "large": "₹14,000 – ₹28,000+",
+      "note": "Watercolor butterflies require additional color sessions and touch-ups."
+    },
+    "designIdeas": [
+      "Monarch butterfly with detailed wing patterns",
+      "Blue morpho butterfly with iridescent color",
+      "Butterfly made of flowers",
+      "Skull butterfly combining life and death",
+      "Watercolor butterfly behind the ear",
+      "Pair of butterflies forming a heart"
+    ],
+    "faqs": [
+      { "q": "Do butterfly tattoos fade quickly?", "a": "Watercolor butterflies fade faster than solid-fill designs. We recommend touch-ups every 3–5 years for vivid colors." },
+      { "q": "What butterfly species look best as tattoos?", "a": "Monarchs, Blue Morphos, Peacock butterflies, and Swallowtails are popular for their distinctive, photogenic wing patterns." },
+      { "q": "Can I combine a butterfly with other elements?", "a": "Yes — butterflies pair beautifully with flowers, skulls, moons, quotes, and geometric patterns." }
+    ]
+  },
+  {
+    "id": "5",
+    "slug": "calligraphy-tattoo",
+    "name": "Calligraphy Tattoo",
+    "description": "Words, quotes, and scripts rendered in beautiful calligraphic styles.",
+    "image": "https://images.unsplash.com/photo-1590548784585-643d2b9f2925?w=800&q=80",
+    "count": 27,
+    "intro": "Words carry power — and calligraphy tattoos transform meaningful quotes, names, and phrases into wearable art. At Ink Rise, our calligraphy specialists execute scripts with the precision of master penmanship, creating letterforms that are as beautiful as they are legible, designed to last a lifetime.",
+    "meaning": "Calligraphy tattoos are deeply personal. They immortalize words that define you — a loved one's name, a mantra you live by, a quote that changed your life, or a date that marks a turning point. The script style itself adds meaning: flowing cursive for romance, bold gothic for strength, delicate Sanskrit for spiritual depth.",
+    "types": [
+      { "name": "Cursive / Script", "description": "Flowing, connected letterforms in classic Western cursive styles." },
+      { "name": "Gothic / Blackletter", "description": "Bold, dramatic medieval letterforms with sharp serifs and strong visual presence." },
+      { "name": "Sanskrit / Devanagari", "description": "Sacred Indian script styles, often used for spiritual mantras and Hindu/Buddhist texts." },
+      { "name": "Arabic Calligraphy", "description": "Flowing Arabic script with its natural decorative flourishes and graceful curves." },
+      { "name": "Brush Lettering", "description": "Mimicking the look of ink-brush strokes with varying weight and expressive flow." },
+      { "name": "Roman / Serif", "description": "Clean, classic Roman lettering with elegant proportions and timeless appeal." }
+    ],
+    "placements": [
+      { "area": "Collarbone", "reason": "One of the most popular placements — text flows elegantly along the collarbone." },
+      { "area": "Forearm (inner)", "reason": "Visible and meaningful — you can read it yourself with a glance." },
+      { "area": "Ribcage", "reason": "Intimate placement for personal mantras and meaningful phrases." },
+      { "area": "Upper Back", "reason": "Long quotes can flow beautifully across the upper back." },
+      { "area": "Wrist / Finger", "reason": "Single words or short phrases look stunning on these small surfaces." }
+    ],
+    "painLevel": { "score": 5, "description": "Moderate. Ribcage and collarbone are more sensitive due to proximity to bone." },
+    "pricing": {
+      "small": "₹1,500 – ₹3,500",
+      "medium": "₹4,000 – ₹8,000",
+      "large": "₹9,000 – ₹18,000+",
+      "note": "Custom lettering design included. We perfect the layout before tattooing."
+    },
+    "designIdeas": [
+      "'This too shall pass' in flowing cursive",
+      "Parent's/child's name in Devanagari script",
+      "Coordinates of a meaningful location",
+      "A Quranic verse in Arabic calligraphy",
+      "Birth date in Roman numerals",
+      "A single word like 'Breathe', 'Strength', 'Amor'"
+    ],
+    "faqs": [
+      { "q": "Can you design a custom font for my tattoo?", "a": "Yes — we create custom lettering mockups for every calligraphy tattoo before it touches your skin." },
+      { "q": "Do small script tattoos blur over time?", "a": "Very fine scripts can blur slightly. We recommend a minimum font size and bold enough strokes for longevity." },
+      { "q": "Can I get text in Hindi or Sanskrit?", "a": "Absolutely. We have experience tattooing Devanagari script and Sanskrit mantras with proper letterform accuracy." }
+    ]
+  },
+  {
+    "id": "6",
+    "slug": "colour-tattoo",
+    "name": "Colour Tattoo",
+    "description": "Bold, vibrant colour work that makes your tattoo truly pop with life.",
+    "image": "https://images.unsplash.com/photo-1562591229-7b18b44b07df?w=800&q=80",
+    "count": 45,
+    "intro": "Colour tattoos are a celebration of life, vibrancy, and artistic expression at its boldest. When done right, a colour tattoo becomes a masterpiece that draws eyes and sparks conversations. At Ink Rise, we use premium pigments and advanced shading techniques to create colour work that looks like paintings on skin.",
+    "meaning": "Colour in tattoo art amplifies emotional impact. Red conveys passion and power. Blue suggests calm and depth. Green evokes nature and growth. Yellow radiates joy and optimism. The combination of colors can tell complex emotional stories that black and grey simply cannot.",
+    "types": [
+      { "name": "Traditional / Old School", "description": "Bold black outlines with flat, primary color fills — the classic sailor tattoo aesthetic." },
+      { "name": "Neo-Traditional", "description": "Evolved traditional style with richer color gradients, more detail, and contemporary subject matter." },
+      { "name": "Watercolor", "description": "Soft, fluid color washes that mimic watercolor painting with no hard outlines." },
+      { "name": "Realism Color", "description": "Photorealistic color work capturing the full tonal range of a photograph." },
+      { "name": "Japanese / Irezumi", "description": "Bold Japanese color conventions: deep reds, vibrant blues, and golden yellows in traditional motifs." },
+      { "name": "New School", "description": "Exaggerated, cartoonish color work with bold outlines and vibrant, almost neon palettes." }
+    ],
+    "placements": [
+      { "area": "Upper Arm / Sleeve", "reason": "Large enough for epic color compositions and easy to show off." },
+      { "area": "Thigh", "reason": "Excellent canvas for large color pieces with room for detail." },
+      { "area": "Back", "reason": "Maximum canvas for large, complex color back pieces." },
+      { "area": "Calf", "reason": "Good size and visibility for medium to large color designs." },
+      { "area": "Chest", "reason": "Powerful placement for traditional eagles, hearts, and bold color portraits." }
+    ],
+    "painLevel": { "score": 6, "description": "Moderate to high. Color shading requires multiple passes over the same area, increasing sensation." },
+    "pricing": {
+      "small": "₹3,000 – ₹6,000",
+      "medium": "₹8,000 – ₹18,000",
+      "large": "₹20,000 – ₹60,000+",
+      "note": "Color tattoos typically require more sessions than black and grey. Touch-ups at 6 weeks included."
+    },
+    "designIdeas": [
+      "Traditional eagle with red, white, and blue",
+      "Koi fish with vibrant orange and gold scales",
+      "Japanese Hannya mask with red and gold",
+      "Watercolor galaxy with nebula colors",
+      "Neo-traditional wolf with rich earth tones",
+      "Tropical flowers in vivid botanical colors"
+    ],
+    "faqs": [
+      { "q": "Do colour tattoos fade faster?", "a": "Yes, especially lighter colors and watercolor styles. Sun protection and touch-ups every 5–7 years keep them vibrant." },
+      { "q": "Do colour tattoos work on all skin tones?", "a": "Our artists are experienced with all skin tones and choose pigments that show beautifully on your specific complexion." },
+      { "q": "How many sessions does a large color piece need?", "a": "A full sleeve can take 15–25+ hours across multiple sessions. We plan each session to give your skin proper healing time." }
+    ]
+  },
+  {
+    "id": "7",
+    "slug": "coverup-tattoo",
+    "name": "Coverup Tattoo",
+    "description": "Transform old tattoos into stunning new artwork with our expert cover-up artists.",
+    "image": "https://images.unsplash.com/photo-1604881988758-f76ad2f7aac1?w=800&q=80",
+    "count": 16,
+    "intro": "A cover-up tattoo is a transformative solution — taking an unwanted tattoo and turning it into something you'll love. Cover-ups require exceptional artistic skill and careful planning. Our specialists at Ink Rise analyze your existing tattoo's density, color, and placement to design a cover-up that completely conceals it while creating stunning new artwork.",
+    "meaning": "Cover-up tattoos represent reinvention and the power of second chances. They're chosen by people who've outgrown an old design, want to correct a poorly done tattoo, or simply wish to replace outdated artwork with something that truly reflects who they are today.",
+    "types": [
+      { "name": "Botanical Cover-Up", "description": "Dense floral and leaf compositions that naturally conceal old tattoos." },
+      { "name": "Dark/Abstract Cover-Up", "description": "Dark shading, abstract shapes, and blackwork that overpowers old ink." },
+      { "name": "Mandala Cover-Up", "description": "Intricate mandala patterns that integrate the old tattoo into their geometric complexity." },
+      { "name": "Animal / Wildlife Cover-Up", "description": "A large, detailed animal portrait that dominates and conceals the original." },
+      { "name": "Japanese Style Cover-Up", "description": "Dense Japanese imagery — dragons, koi, waves — that can cover almost any old design." },
+      { "name": "Sleeve Integration", "description": "Incorporating the old tattoo into a full sleeve design, hiding it within a larger composition." }
+    ],
+    "placements": [
+      { "area": "Same area as existing tattoo", "reason": "The cover-up design must be placed over and around the existing tattoo." }
+    ],
+    "painLevel": { "score": 7, "description": "Cover-ups often require working over already tattooed skin, which can be more sensitive." },
+    "pricing": {
+      "small": "₹4,000 – ₹8,000",
+      "medium": "₹9,000 – ₹20,000",
+      "large": "₹22,000 – ₹50,000+",
+      "note": "Cover-ups require an in-person consultation to assess feasibility and quote accurately."
+    },
+    "designIdeas": [
+      "Rose bouquet covering a name tattoo",
+      "Geometric mandala covering an old tribal piece",
+      "Dragon cover-up over a faded full arm piece",
+      "Floral sleeve integrating old disconnected tattoos",
+      "Blackwork abstract cover-up"
+    ],
+    "faqs": [
+      { "q": "Can any tattoo be covered up?", "a": "Most can, yes. Very dark, heavily saturated old tattoos may require laser lightening sessions first to achieve the best result." },
+      { "q": "How much bigger does the cover-up need to be?", "a": "Generally 2–3x larger than the original tattoo to have enough room to conceal it effectively." },
+      { "q": "How long does a cover-up consultation take?", "a": "About 30 minutes. We photograph, assess, and sketch initial cover-up concepts before you commit." }
+    ]
+  },
+  {
+    "id": "8",
+    "slug": "eagle-tattoo",
+    "name": "Eagle Tattoo",
+    "description": "Majestic eagle designs representing freedom, strength, and power.",
+    "image": "https://images.unsplash.com/photo-1559181567-c3190ca9d2c5?w=800&q=80",
+    "count": 22,
+    "intro": "The eagle is one of the most powerful symbols in human history — revered as a messenger of the gods in ancient Greece, a symbol of the Roman Empire, a sacred bird in Native American traditions, and a national emblem of strength and freedom. An eagle tattoo is a bold declaration of independence, ambition, and power.",
+    "meaning": "Eagles represent freedom — the ability to soar above life's challenges. They symbolize strength, vision (eagles can spot prey from 3km away), leadership, and spiritual connection to the sky and higher powers. Eagle tattoos are often chosen by military personnel, leaders, and anyone who aspires to rise above.",
+    "types": [
+      { "name": "American Eagle", "description": "Bold, patriotic bald eagle designs often paired with shields, flags, or banners." },
+      { "name": "Realistic Eagle Portrait", "description": "Photorealistic eagle head or full body with incredible feather detail." },
+      { "name": "Eagle in Flight", "description": "Wings spread wide — a dramatic composition across the chest or back." },
+      { "name": "Eagle and Snake", "description": "The classic predator vs prey symbolism of power and cunning." },
+      { "name": "Aztec / Native Eagle", "description": "Cultural eagle designs from Aztec or Native American traditions with bold patterns." },
+      { "name": "Double-Headed Eagle", "description": "Heraldic symbol of dual power, used in Byzantine and European royal crests." }
+    ],
+    "placements": [
+      { "area": "Chest", "reason": "Wings-spread eagle centered on the chest is a classic, powerful composition." },
+      { "area": "Back (full back)", "reason": "Maximum impact for a soaring eagle in full flight." },
+      { "area": "Shoulder", "reason": "Eagle head portraits look powerful on the shoulder cap." },
+      { "area": "Forearm", "reason": "Diving or perched eagle designs work well on the forearm." },
+      { "area": "Calf", "reason": "Eagles in flight look great on the calf's vertical canvas." }
+    ],
+    "painLevel": { "score": 6, "description": "Moderate. Chest and back pieces are more sensitive due to proximity to bone and nerve density." },
+    "pricing": {
+      "small": "₹3,000 – ₹7,000",
+      "medium": "₹8,000 – ₹18,000",
+      "large": "₹20,000 – ₹45,000+",
+      "note": "Large eagle chest or back pieces are our artists' specialty."
+    },
+    "designIdeas": [
+      "Bald eagle with shield and stars",
+      "Realistic eagle head portrait with intense gaze",
+      "Eagle in flight across the full chest",
+      "Eagle clutching a snake",
+      "Aztec sun eagle",
+      "Black and grey eagle with clock and rose"
+    ],
+    "faqs": [
+      { "q": "How long does a large eagle back piece take?", "a": "A detailed full-back eagle can take 20–30 hours across 4–6 sessions." },
+      { "q": "Which artist specializes in eagle tattoos at Ink Rise?", "a": "Aryan Sharma has done multiple award-winning eagle pieces. Book a consultation to see his portfolio." },
+      { "q": "Can an eagle tattoo be combined with other elements?", "a": "Absolutely — eagles pair beautifully with flags, roses, clocks, mountains, and tribal patterns." }
+    ]
+  },
+  {
+    "id": "9",
+    "slug": "geometric-tattoo",
+    "name": "Geometric Tattoo",
+    "description": "Precise geometric patterns and sacred geometry that create visual harmony.",
+    "image": "https://images.unsplash.com/photo-1542856204-00101eb6def4?w=800&q=80",
+    "count": 33,
+    "intro": "Geometric tattoos are a perfect marriage of mathematics and artistry. Built from precise lines, angles, and patterns, they create visual harmony that is both modern and ancient — drawing from sacred geometry, sacred mathematics, and the universal patterns that underlie all of nature. At Ink Rise, our geometric specialists execute these designs with laser-like precision.",
+    "meaning": "Sacred geometry reflects the patterns that appear throughout nature — the Fibonacci sequence in a nautilus shell, the hexagonal structure of a honeycomb, the fractal repetition of ferns. These patterns represent the underlying order of the universe. Geometric tattoos connect the wearer to this universal order, often expressing balance, perfection, and intellectual beauty.",
+    "types": [
+      { "name": "Sacred Geometry", "description": "Metatron's Cube, Flower of Life, Sri Yantra, and other ancient geometric symbols." },
+      { "name": "Mandala Geometric", "description": "Circular mandala patterns built from precise geometric subdivisions." },
+      { "name": "Geometric Animal", "description": "Animals (wolf, lion, bear) deconstructed into geometric triangles and facets." },
+      { "name": "Dotwork Geometric", "description": "Patterns built entirely from thousands of dots — stunning gradients and textures." },
+      { "name": "Line Art Geometric", "description": "Clean, minimal single-line geometric forms for a modern, architectural look." },
+      { "name": "3D Geometric", "description": "Optical illusion tattoos that make geometric shapes appear to lift off the skin." }
+    ],
+    "placements": [
+      { "area": "Forearm", "reason": "Excellent for elongated geometric compositions and sacred symbols." },
+      { "area": "Hand / Palm", "reason": "Geometric patterns on hands are striking and symbolic." },
+      { "area": "Chest", "reason": "Centered geometric mandalas look powerful on the chest." },
+      { "area": "Thigh", "reason": "Large enough for complex sacred geometry pieces." },
+      { "area": "Back", "reason": "Full-back geometric compositions create a breathtaking visual." }
+    ],
+    "painLevel": { "score": 5, "description": "Moderate. The process of precise linework requires the artist to work slowly, which can extend sitting time." },
+    "pricing": {
+      "small": "₹2,500 – ₹5,000",
+      "medium": "₹6,000 – ₹15,000",
+      "large": "₹18,000 – ₹40,000+",
+      "note": "Precision linework and dotwork take longer. Price reflects quality and time."
+    },
+    "designIdeas": [
+      "Flower of Life on the chest",
+      "Geometric wolf head in triangular facets",
+      "Dotwork mandala on the forearm",
+      "3D cube optical illusion tattoo",
+      "Sri Yantra with lotus petals",
+      "Fibonacci spiral geometric arm piece"
+    ],
+    "faqs": [
+      { "q": "Do geometric lines stay crisp over time?", "a": "Yes — clean geometric linework ages extremely well. Minor line spreading may occur but overall patterns hold beautifully." },
+      { "q": "How precise can geometric tattoos be?", "a": "Our artists use rulers, stencils, and freehand techniques developed over years to achieve extraordinary precision." },
+      { "q": "Can geometric be combined with realism?", "a": "Yes — geo-realism is a popular hybrid style combining realistic elements within or around geometric shapes." }
+    ]
+  },
+  {
+    "id": "10",
+    "slug": "portrait-tattoo",
+    "name": "Portrait Tattoo",
+    "description": "Hyper-realistic portraits of loved ones, icons, or characters in breathtaking detail.",
+    "image": "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?w=800&q=80",
+    "count": 28,
+    "intro": "Portrait tattoos are the most technically demanding and emotionally powerful tattoos in existence. Capturing a human face — especially someone you love — requires an extraordinary level of skill in realism, shading, and proportion. At Ink Rise, our portrait specialist Aryan Sharma has dedicated years to perfecting this demanding art form, delivering portraits that bring tears to clients' eyes.",
+    "meaning": "Portrait tattoos are the ultimate tribute — immortalizing someone who shaped your life. Whether it's a grandparent, child, mentor, celebrity, or beloved pet, a portrait tattoo is a permanent declaration of love, gratitude, or admiration. It says: this person matters to me forever.",
+    "types": [
+      { "name": "Realistic Black & Grey Portrait", "description": "The gold standard — ultra-realistic portraits using only black, grey, and white for a timeless, photographic quality." },
+      { "name": "Colour Realistic Portrait", "description": "Full-color hyper-realistic portraits that capture every nuance of skin tone, eye color, and hair detail." },
+      { "name": "Sketch / Etching Portrait", "description": "Portraits styled to look like pencil sketches or copper engravings — artistic and distinctive." },
+      { "name": "Geometric Portrait", "description": "Realistic faces emerging from or dissolving into geometric patterns — a striking modern aesthetic." },
+      { "name": "Pet Portrait", "description": "Beloved animals captured with the same photorealistic techniques used for human portraits." },
+      { "name": "Celebrity / Character Portrait", "description": "Icons of music, film, and culture — or beloved fictional characters — rendered in stunning detail." }
+    ],
+    "placements": [
+      { "area": "Upper Arm / Bicep", "reason": "Classic location for medium-sized portrait tattoos." },
+      { "area": "Chest (over the heart)", "reason": "Emotionally powerful placement for loved ones and memorial portraits." },
+      { "area": "Thigh", "reason": "Largest canvas for detail-rich, full-size portrait pieces." },
+      { "area": "Calf", "reason": "Excellent for bust-style or face-only portraits." },
+      { "area": "Back (upper)", "reason": "Allows large, incredibly detailed multi-subject portrait compositions." }
+    ],
+    "painLevel": { "score": 6, "description": "Moderate to high. Portraits require long sessions with heavy shading work." },
+    "pricing": {
+      "small": "₹5,000 – ₹10,000",
+      "medium": "₹12,000 – ₹25,000",
+      "large": "₹28,000 – ₹60,000+",
+      "note": "Portrait quality reference photos are essential. We recommend high-resolution images for best results."
+    },
+    "designIdeas": [
+      "Realistic portrait of a deceased parent with rose",
+      "Celebrity portrait (Tupac, Marilyn Monroe, Virat Kohli)",
+      "Newborn baby portrait",
+      "Pet portrait of dog or cat",
+      "Double portrait — parents and child",
+      "Half-face geometric portrait fusion"
+    ],
+    "faqs": [
+      { "q": "What photo quality do I need for a portrait tattoo?", "a": "High resolution (at least 1000px wide), well-lit, front-facing photos give the best results. Blurry or low-light photos result in less accurate portraits." },
+      { "q": "How long does a portrait tattoo take?", "a": "A medium portrait (4–5 inches) takes 4–6 hours. Larger, more detailed portraits can take 8–15+ hours across sessions." },
+      { "q": "Can you guarantee an exact likeness?", "a": "Our artists work with extreme care to capture likeness. We show you a detailed stencil and can make adjustments before we begin tattooing." }
+    ]
+  },
+  {
+    "id": "11",
+    "slug": "small-tattoo",
+    "name": "Small Tattoo",
+    "description": "Minimalist and delicate small tattoos with big impact and timeless elegance.",
+    "image": "https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?w=800&q=80",
+    "count": 52,
+    "intro": "Small tattoos prove that you don't need a large canvas to make a big statement. Delicate, precise, and endlessly versatile, small tattoos are perfect for first-timers, those with minimal pain tolerance, or anyone who wants meaningful art in a subtle package. At Ink Rise, we execute small tattoos with the same care and precision we give to large pieces — every line, every dot, placed with intention.",
+    "meaning": "Small tattoos often carry enormous personal meaning compressed into a tiny package. A small infinity symbol on the wrist. A tiny anchor on the ankle. A simple semicolon on the finger. These minimal designs say volumes about the person who wears them — chosen deliberately for their ability to be simultaneously visible and intimate.",
+    "types": [
+      { "name": "Fine Line", "description": "Ultra-thin, delicate lines creating minimal designs with a refined, high-fashion aesthetic." },
+      { "name": "Micro Realism", "description": "Tiny photorealistic designs — plants, faces, animals — packed with extraordinary detail." },
+      { "name": "Minimalist Symbols", "description": "Simple meaningful symbols: arrows, hearts, moons, stars, initials, and coordinates." },
+      { "name": "Dotwork Small", "description": "Small designs built from precise dots — mandalas, geometric shapes, and stippled illustrations." },
+      { "name": "Matching / Couple Tattoos", "description": "Small coordinating designs shared between friends, couples, or siblings." },
+      { "name": "Watercolor Tiny", "description": "Small but vivid splashes of color forming flowers, feathers, or abstract shapes." }
+    ],
+    "placements": [
+      { "area": "Wrist (inner)", "reason": "Visible, personal, and perfect for words and small symbols." },
+      { "area": "Finger / Hand", "reason": "Delicate ring tattoos and small symbols look stunning here." },
+      { "area": "Behind the Ear", "reason": "Intimate and charming placement for tiny designs." },
+      { "area": "Ankle", "reason": "Elegant and easy to show or hide as desired." },
+      { "area": "Collarbone", "reason": "Feminine and elegant placement for small text or symbols." }
+    ],
+    "painLevel": { "score": 3, "description": "Low to moderate. Fingers and wrists near bone can sting more than fleshy areas." },
+    "pricing": {
+      "small": "₹1,000 – ₹3,000",
+      "medium": "₹3,000 – ₹6,000",
+      "large": "N/A — small tattoos are our specialty under ₹8,000",
+      "note": "Walk-ins welcome for small designs. Pre-booking recommended."
+    },
+    "designIdeas": [
+      "Tiny lotus flower on the wrist",
+      "Single line mountain on the collarbone",
+      "Semicolon on the finger",
+      "Small compass on the ankle",
+      "Matching sun and moon for couples",
+      "Tiny cat sitting behind the ear"
+    ],
+    "faqs": [
+      { "q": "Do small tattoos age well?", "a": "Fine line and very small tattoos can lose definition over time. We recommend minimum line weights and proper aftercare." },
+      { "q": "Can I walk in for a small tattoo?", "a": "Yes! We welcome walk-ins for small designs. Call ahead to check artist availability." },
+      { "q": "Are finger tattoos a good idea?", "a": "Finger tattoos fade faster due to skin cell turnover in that area. We advise simple, bold designs and plan for touch-ups." }
+    ]
+  },
+  {
+    "id": "12",
+    "slug": "spiritual-tattoo",
+    "name": "Spiritual Tattoo",
+    "description": "Sacred symbols, mandalas, and spiritual imagery connecting art with the divine.",
+    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80",
+    "count": 29,
+    "intro": "Spiritual tattoos are among the most meaningful and transformative types of body art. They connect the wearer to something larger than themselves — to the divine, to ancestral traditions, to universal truths, or to personal spiritual journeys. At Ink Rise, we approach spiritual tattoos with deep respect, researching symbols carefully and executing them with the reverence they deserve.",
+    "meaning": "Every spiritual symbol carries layers of meaning developed over centuries. The Om represents the sound of the universe. The Hamsa offers protection. The lotus represents enlightenment rising from difficulty. The Third Eye symbolizes inner vision and intuition. These aren't just beautiful designs — they're invitations to carry sacred energy with you always.",
+    "types": [
+      { "name": "Mandala", "description": "Sacred circular geometric patterns representing the cosmos and the self — perfect for meditation and mindfulness." },
+      { "name": "Om / Aum Symbol", "description": "The primordial sound of creation in Hindu and Buddhist traditions, rendered in countless artistic styles." },
+      { "name": "Lotus Flower", "description": "The sacred flower of Buddhism and Hinduism — representing purity, enlightenment, and rebirth." },
+      { "name": "Buddha / Deity Portrait", "description": "Respectful portrait tattoos of Buddha, Ganesh, Shiva, and other deities." },
+      { "name": "Third Eye / Chakra", "description": "Representations of the 7 chakras or the Third Eye (Ajna) — symbolizing inner vision and energy centers." },
+      { "name": "Cross / Religious Symbol", "description": "Christian crosses, Star of David, Islamic crescent, and other sacred religious symbols." }
+    ],
+    "placements": [
+      { "area": "Forearm", "reason": "Keep spiritual symbols where you can see and draw strength from them daily." },
+      { "area": "Chest / Sternum", "reason": "Close to the heart — deeply personal and powerful." },
+      { "area": "Back (between shoulder blades)", "reason": "Traditional placement for deity portraits and large mandalas." },
+      { "area": "Nape of neck", "reason": "Spiritual symbols here represent a crown of consciousness." },
+      { "area": "Hand / Palm", "reason": "Hands are how we interact with the world — spiritual symbols here bless every action." }
+    ],
+    "painLevel": { "score": 5, "description": "Moderate. Placement varies significantly — sternum is more painful, forearm is comfortable." },
+    "pricing": {
+      "small": "₹2,000 – ₹5,000",
+      "medium": "₹6,000 – ₹15,000",
+      "large": "₹16,000 – ₹35,000+",
+      "note": "We research every spiritual symbol with care and can advise on cultural appropriateness."
+    },
+    "designIdeas": [
+      "Large dotwork mandala on the upper back",
+      "Om symbol with lotus base",
+      "Geometric hamsa with evil eye center",
+      "Ganesh portrait with marigold garland",
+      "Third eye chakra between eyebrows (temporary placement)",
+      "Lotus unfolding from water on the wrist"
+    ],
+    "faqs": [
+      { "q": "Do you research the cultural meaning of spiritual symbols?", "a": "Yes. We take cultural sensitivity seriously and will discuss the meaning and appropriate use of any symbol before tattooing." },
+      { "q": "Is it okay to get a religious symbol tattooed?", "a": "It depends on the symbol and your connection to it. We have an open conversation with every client about their intention before proceeding." },
+      { "q": "Can I combine multiple spiritual symbols in one tattoo?", "a": "Yes — we can create beautiful compositions that combine chakras, mantras, lotus flowers, and sacred geometry harmoniously." }
+    ]
+  },
+  {
+    "id": "13",
+    "slug": "piercing",
+    "name": "Piercing",
+    "description": "Professional body piercing services using premium sterilized jewelry and equipment.",
+    "image": "https://images.unsplash.com/photo-1621111848501-8d3634f82336?w=800&q=80",
+    "count": 41,
+    "intro": "At Ink Rise, our piercing service brings the same commitment to excellence that defines our tattoo work. We use only premium surgical-grade titanium and implant-grade materials, autoclaved sterilization, and single-use needles for every piercing. Our piercing specialist ensures precise placement, minimal discomfort, and thorough aftercare guidance.",
+    "meaning": "Body piercing has been practiced for thousands of years across virtually every human culture — from ancient Egyptian royalty adorning their ears to Aztec warriors with lip plates. Today, piercings are a form of self-expression, adornment, and sometimes spiritual significance.",
+    "types": [
+      { "name": "Ear Piercing", "description": "Lobe, helix, tragus, daith, conch, industrial, and rook — we do them all with precision." },
+      { "name": "Nose Piercing", "description": "Nostril, septum, and bridge piercings with premium curved barbells and rings." },
+      { "name": "Lip / Labret", "description": "Various lip placement piercings with flat-back labret jewelry." },
+      { "name": "Eyebrow / Surface", "description": "Surface piercings with curved barbells for the eyebrow and other flat areas." },
+      { "name": "Navel / Belly", "description": "Classic navel piercing with decorative curved barbells." },
+      { "name": "Tongue", "description": "Straight barbell tongue piercings for the adventurous." }
+    ],
+    "placements": [
+      { "area": "Ear", "reason": "Most popular and versatile — endless combination possibilities." },
+      { "area": "Nose", "reason": "Second most common — elegant and expressive." },
+      { "area": "Navel", "reason": "Stylish and seasonal — show it off in summer." }
+    ],
+    "painLevel": { "score": 3, "description": "Generally low. A quick pinch rather than prolonged pain. Cartilage piercings are slightly more intense." },
+    "pricing": {
+      "small": "₹500 – ₹1,500",
+      "medium": "₹1,500 – ₹3,000",
+      "large": "₹3,000 – ₹6,000",
+      "note": "Price includes starter jewelry. Jewelry upgrades available separately."
+    },
+    "designIdeas": [
+      "Curated ear stack (multiple ear piercings)",
+      "Septum ring with ornate curved piece",
+      "Industrial barbell across the ear",
+      "Daith piercing with heart-shaped ring",
+      "Nose stud with gemstone",
+      "Navel ring with dangling charm"
+    ],
+    "faqs": [
+      { "q": "How long does a piercing take to heal?", "a": "Ear lobes: 6–8 weeks. Cartilage: 6–12 months. Septum: 6–8 weeks. Navel: 6–12 months. Tongue: 4–6 weeks." },
+      { "q": "What jewelry material do you use?", "a": "We use ASTM F136 implant-grade titanium and implant-grade stainless steel — the safest options for fresh piercings." },
+      { "q": "Can I change my jewelry immediately after piercing?", "a": "No — we strongly advise keeping starter jewelry in until fully healed. Changing early can cause irritation and infection." }
+    ]
+  }
+]

@@ -1,26 +1,564 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-cinzel: 'Cinzel', serif;
+  --font-inter: 'Inter', sans-serif;
+
+  --bg-primary: #0a0a0a;
+  --bg-surface: #111111;
+  --bg-card: #1a1a1a;
+  --border: #2a2a2a;
+  --accent-gold: #c9a84c;
+  --accent-gold-light: #e8c76a;
+  --text-primary: #f5f5f5;
+  --text-muted: #888888;
+  --text-dim: #cccccc;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.light {
+  --bg-primary: #fafafa;
+  --bg-surface: #ffffff;
+  --bg-card: #f5f5f5;
+  --border: #e5e5e5;
+  --text-primary: #171717;
+  --text-muted: #737373;
+  --text-dim: #404040;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-gold);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-gold-light);
+}
+
+/* Text Selection */
+::selection {
+  background: var(--accent-gold);
+  color: #0a0a0a;
+}
+
+/* Gold Gradient Text */
+.gold-text {
+  background: linear-gradient(135deg, #c9a84c 0%, #e8c76a 50%, #a07c28 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   SECTION PADDING — Desktop-first luxury spacing
+   ============================================ */
+.section-padding {
+  padding: 8rem 0;
+}
+
+@media (max-width: 1280px) {
+  .section-padding {
+    padding: 6rem 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-padding {
+    padding: 5rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 3.5rem 0;
+  }
+}
+
+/* ============================================
+   CONTAINER — Max-width with premium gutters
+   ============================================ */
+.container-custom {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+@media (max-width: 1280px) {
+  .container-custom {
+    padding: 0 2.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container-custom {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-custom {
+    padding: 0 1.25rem;
+  }
+}
+
+/* ============================================
+   PAGE HERO — Consistent across all pages
+   ============================================ */
+.page-hero {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  background: #0d0d0d;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+@media (min-width: 1024px) {
+  .page-hero {
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+/* ============================================
+   NAVBAR — Always visible, semi-transparent
+   ============================================ */
+.navbar-scrolled {
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid #2a2a2a;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-default {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(42, 42, 42, 0.5);
+}
+
+/* Gold Divider */
+.gold-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #c9a84c, #e8c76a);
+  border-radius: 2px;
+}
+
+/* Card Hover Effect */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(201, 168, 76, 0.15);
+}
+
+/* ============================================
+   FILTER BUTTONS — Premium pill style
+   ============================================ */
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  border: 1px solid #2a2a2a;
+  background: transparent;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.filter-btn:hover {
+  border-color: rgba(201, 168, 76, 0.5);
+  color: #f5f5f5;
+  background: rgba(201, 168, 76, 0.05);
+}
+
+.filter-btn.active {
+  background: #c9a84c;
+  color: #000;
+  border-color: #c9a84c;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(201, 168, 76, 0.3);
+}
+
+@media (min-width: 1024px) {
+  .filter-btn {
+    height: 48px;
+    padding: 0 1.5rem;
+    font-size: 0.9375rem;
+  }
+}
+
+/* ============================================
+   FILTER BAR — Scrollable with premium look
+   ============================================ */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .filter-bar {
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+}
+
+/* Infinite Scroll animation */
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll-left {
+  animation: scrollLeft 40s linear infinite;
+}
+.animate-scroll-left:hover {
+  animation-play-state: paused;
+}
+
+/* Pulse animation for WhatsApp */
+@keyframes pulseRing {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+.whatsapp-pulse {
+  animation: pulseRing 2s ease-in-out infinite;
+}
+
+/* Fade In Up */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Hero text shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Lightbox overlay */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Nav active indicator */
+.nav-active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #c9a84c, #e8c76a);
+  margin-top: 2px;
+  border-radius: 1px;
+}
+
+/* ============================================
+   MASONRY GRID — Desktop-first larger cards
+   ============================================ */
+.masonry-grid {
+  columns: 3;
+  column-gap: 1.5rem;
+}
+
+@media (min-width: 1280px) {
+  .masonry-grid {
+    columns: 4;
+    column-gap: 1.75rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .masonry-grid {
+    columns: 3;
+    column-gap: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .masonry-grid {
+    columns: 2;
+    column-gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .masonry-grid {
+    columns: 1;
+  }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .masonry-item {
+    margin-bottom: 1.75rem;
+    border-radius: 16px;
+  }
+}
+
+/* Horizontal Scroll */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Accordion */
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+/* Category card gradient overlay */
+.category-card-overlay {
+  background: linear-gradient(to top, rgba(10,10,10,0.9) 0%, rgba(10,10,10,0.4) 50%, rgba(10,10,10,0.1) 100%);
+}
+
+/* Form focus styles */
+.form-input {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  color: #f5f5f5;
+  border-radius: 8px;
+  padding: 0.875rem 1rem;
+  width: 100%;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  font-family: var(--font-inter);
+  font-size: 0.9375rem;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #c9a84c;
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+}
+
+.form-input::placeholder {
+  color: #666;
+}
+
+/* Review card star */
+.star-filled {
+  color: #f59e0b;
+}
+
+/* Snap scroll for categories */
+.snap-container {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.snap-child {
+  scroll-snap-align: start;
+}
+
+/* Light mode overrides for hardcoded utility classes */
+html.light body,
+.light {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.light .bg-\[\#0a0a0a\] {
+  background-color: var(--bg-primary) !important;
+}
+
+.light .bg-\[\#111111\] {
+  background-color: var(--bg-surface) !important;
+}
+
+.light .bg-\[\#1a1a1a\] {
+  background-color: var(--bg-card) !important;
+}
+
+.light .bg-\[\#0d0d0d\] {
+  background-color: var(--bg-surface) !important;
+}
+
+.light .text-\[\#f5f5f5\] {
+  color: var(--text-primary) !important;
+}
+
+.light .text-\[\#888\] {
+  color: var(--text-muted) !important;
+}
+
+.light .text-\[\#888888\] {
+  color: var(--text-muted) !important;
+}
+
+.light .text-\[\#cccccc\] {
+  color: var(--text-dim) !important;
+}
+
+.light .text-\[\#ccc\] {
+  color: var(--text-dim) !important;
+}
+
+.light .border-\[\#2a2a2a\] {
+  border-color: var(--border) !important;
+}
+
+.light .text-\[\#555\] {
+  color: #737373 !important;
+}
+
+.light .text-\[\#666\] {
+  color: #525252 !important;
+}
+
+.light .bg-black\/70 {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.light .bg-black\/60 {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.light .border-white\/10 {
+  border-color: var(--border) !important;
+}
+
+.light .bg-gradient-to-t {
+  background-image: linear-gradient(to top, rgba(250, 250, 250, 0.9) 0%, rgba(250, 250, 250, 0.4) 50%, rgba(250, 250, 250, 0.1) 100%) !important;
+}
+
+.light .lightbox-overlay {
+  background: rgba(255, 255, 255, 0.98) !important;
+}
+
+.light .lightbox-overlay button {
+  background: rgba(0, 0, 0, 0.1) !important;
+  color: #000 !important;
+}
+
+.light .lightbox-overlay button:hover {
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Admin form input */
+.form-input {
+  width: 100%;
+  background: #0d0d0d;
+  border: 1px solid #2a2a2a;
+  border-radius: 0.75rem;
+  padding: 0.625rem 0.875rem;
+  color: #f5f5f5;
+  font-size: 0.875rem;
+  font-family: var(--font-inter), sans-serif;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+.form-input:focus {
+  border-color: #c9a84c;
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
+}
+.form-input::placeholder {
+  color: #444;
+}
+
+/* ============================================
+   DESKTOP HERO TYPOGRAPHY SCALE
+   ============================================ */
+.hero-heading {
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.section-heading {
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
+  line-height: 1.1;
+}
+
+/* ============================================
+   PORTFOLIO CARD — Desktop hover animations
+   ============================================ */
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid #2a2a2a;
+  cursor: pointer;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+  border-color: rgba(201, 168, 76, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.portfolio-card img {
+  transition: transform 0.7s ease;
+}
+
+.portfolio-card:hover img {
+  transform: scale(1.06);
 }

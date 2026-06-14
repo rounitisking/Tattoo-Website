@@ -1,0 +1,29 @@
+[
+  {
+    "id": "col1",
+    "slug": "black-grey-masters",
+    "name": "Black & Grey Masters",
+    "description": "A curated collection of our finest black and grey realism work — portraits, wildlife, and abstract compositions that demonstrate the full range of tonal mastery.",
+    "image": "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?w=800&q=80",
+    "category": "Realism",
+    "items": ["p1", "p6", "p7", "p8"]
+  },
+  {
+    "id": "col2",
+    "slug": "sacred-geometry",
+    "name": "Sacred Geometry Collection",
+    "description": "Precise geometric and spiritual pieces that explore the mathematical beauty underlying all of nature — mandalas, sacred symbols, and dotwork masterpieces.",
+    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80",
+    "category": "Geometric",
+    "items": ["p2", "p4", "p9"]
+  },
+  {
+    "id": "col3",
+    "slug": "colour-explosion",
+    "name": "Colour Explosion",
+    "description": "Bold, vibrant colour work that demonstrates Ink Rise's mastery of pigment, shading, and composition — from traditional to neo-traditional to watercolor.",
+    "image": "https://images.unsplash.com/photo-1562591229-7b18b44b07df?w=800&q=80",
+    "category": "Colour",
+    "items": ["p3", "p5", "p10", "p12"]
+  }
+]

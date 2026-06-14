@@ -11,6 +11,33 @@ export interface Artist {
   awards: string[];
 }
 
+export interface CategoryType {
+  name: string;
+  description: string;
+}
+
+export interface CategoryPlacement {
+  area: string;
+  reason: string;
+}
+
+export interface CategoryPainLevel {
+  score: number; // 1–10
+  description: string;
+}
+
+export interface CategoryPricing {
+  small: string;
+  medium: string;
+  large: string;
+  note: string;
+}
+
+export interface CategoryFAQ {
+  q: string;
+  a: string;
+}
+
 export interface Category {
   id: string;
   slug: string;
@@ -18,6 +45,15 @@ export interface Category {
   description: string;
   image: string;
   count: number;
+  // Rich content fields (optional — populated from admin)
+  intro?: string;
+  meaning?: string;
+  types?: CategoryType[];
+  placements?: CategoryPlacement[];
+  painLevel?: CategoryPainLevel;
+  pricing?: CategoryPricing;
+  designIdeas?: string[];
+  faqs?: CategoryFAQ[];
 }
 
 export interface PortfolioItem {
@@ -29,6 +65,17 @@ export interface PortfolioItem {
   artist: string;
   width: number;
   height: number;
+  description?: string;
+}
+
+export interface Collection {
+  id: string;
+  slug: string;
+  name: string;
+  description: string;
+  image: string;
+  category: string;
+  items: string[]; // portfolio item IDs
 }
 
 export interface Review {
