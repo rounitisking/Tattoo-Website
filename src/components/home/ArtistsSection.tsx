@@ -1,14 +1,24 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
 import { Instagram } from '@/components/ui/SocialIcons';
-import { artists } from '@/data/artists';
+import { Artist } from '@/types';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 export default function ArtistsSection() {
+  const [artists, setArtists] = useState<Artist[]>([]);
+
+  useEffect(() => {
+    fetch('/api/artists', { cache: 'no-store' })
+      .then((r) => r.json())
+      .then((data: Artist[]) => setArtists(data))
+      .catch(() => {});
+  }, []);
+
   return (
     <section id="artists" className="section-padding bg-[#0a0a0a]">
       <div className="container-custom">
@@ -31,8 +41,8 @@ export default function ArtistsSection() {
               className="relative"
             >
               {/* Main card link — wraps the entire card content */}
-              <Link href={`/artists/${artist.slug}`} className="block">
-                <div className="bg-[#111111] rounded-2xl overflow-hidden border border-[#2a2a2a] hover:border-[#c9a84c]/50 transition-all duration-300 group card-hover">
+              <Link href={`/artists/${artist.slug}`} className="block outline-none">
+                <div className="bg-[#111111] rounded-2xl overflow-hidden border border-[#2a2a2a] hover:border-[#c9a84c]/60 hover:scale-[1.02] hover:shadow-[0_8px_30px_rgba(201,168,76,0.15)] active:scale-[0.98] transition-all duration-300 group card-hover">
                   {/* Photo */}
                   <div className="relative h-64 overflow-hidden">
                     <Image
@@ -42,6 +52,7 @@ export default function ArtistsSection() {
                       sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
                       loading="lazy"
+                      unoptimized={artist.photo.startsWith('/uploads/')}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-transparent" />
                   </div>

@@ -1,18 +1,23 @@
-import { Metadata } from 'next';
+'use client';
+
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 import { Instagram } from '@/components/ui/SocialIcons';
-import { artists } from '@/data/artists';
+import { Artist } from '@/types';
 import CTABanner from '@/components/home/CTABanner';
 
-export const metadata: Metadata = {
-  title: 'Our Artists',
-  description:
-    'Meet the talented artists at Ink Rise Tattoo Studio. Specialists in realism, geometric, colour, portrait, and more tattoo styles.',
-};
-
 export default function ArtistsPage() {
+  const [artists, setArtists] = useState<Artist[]>([]);
+
+  useEffect(() => {
+    fetch('/api/artists', { cache: 'no-store' })
+      .then((r) => r.json())
+      .then((data: Artist[]) => setArtists(data))
+      .catch(() => {});
+  }, []);
+
   return (
     <>
       {/* Page Hero */}
@@ -36,8 +41,8 @@ export default function ArtistsPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
             {artists.map((artist) => (
-              <div key={artist.id} className="relative bg-[#111111] rounded-2xl overflow-hidden border border-[#2a2a2a] hover:border-[#c9a84c]/50 transition-all duration-300 group card-hover">
-                <Link href={`/artists/${artist.slug}`} className="block">
+              <div key={artist.id} className="relative bg-[#111111] rounded-2xl overflow-hidden border border-[#2a2a2a] hover:border-[#c9a84c]/60 hover:scale-[1.02] hover:shadow-[0_8px_30px_rgba(201,168,76,0.15)] active:scale-[0.98] transition-all duration-300 group card-hover">
+                <Link href={`/artists/${artist.slug}`} className="block outline-none">
                   <div className="relative h-80 lg:h-96 overflow-hidden">
                     <Image
                       src={artist.photo}
@@ -45,6 +50,7 @@ export default function ArtistsPage() {
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                      unoptimized={artist.photo.startsWith('/uploads/')}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-transparent" />
                   </div>

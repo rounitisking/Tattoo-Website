@@ -23,9 +23,9 @@ export default function HeroSection() {
 
   return (
     <section
-  id="hero"
-  className="relative min-h-screen flex flex-col overflow-hidden bg-[#0a0a0a]"
->
+      id="hero"
+      className="relative min-h-screen flex flex-col overflow-hidden bg-[#0a0a0a] pt-24 lg:pt-28"
+    >
       {/* Background gradient orbs */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#c9a84c]/5 rounded-full blur-[120px]" />

@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, MapPin, DollarSign, Zap, Palette, HelpCircle, ArrowRight, Phone, MessageCircle, Star } from 'lucide-react';
 import { Category } from '@/types';
 import CTABanner from '@/components/home/CTABanner';
+import { SITE_CONFIG } from '@/constants/site';
 
 interface Props { params: Promise<{ slug: string }> }
 
@@ -275,11 +276,11 @@ export default function CategoryPage({ params }: Props) {
             </h2>
             <p className="text-[#888] font-inter mb-8 text-base">Book a free consultation with our artists and bring your vision to life.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer"
+              <a href={`https://wa.me/${SITE_CONFIG.whatsapp}?text=${encodeURIComponent(SITE_CONFIG.whatsappMessage)}`} target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-[#c9a84c] to-[#a07c28] text-black font-bold rounded-full hover:from-[#e8c76a] hover:to-[#c9a84c] transition-all shadow-xl">
-                <MessageCircle size={16} /> Book via WhatsApp
+                <Image src="/whatsappIcon.webp" alt="WhatsApp" width={20} height={20} className="object-contain" /> Book via WhatsApp
               </a>
-              <a href="tel:+919876543210"
+              <a href={`tel:${SITE_CONFIG.phone}`}
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-[#c9a84c]/40 text-[#c9a84c] rounded-full hover:bg-[#c9a84c]/10 transition-all font-semibold">
                 <Phone size={16} /> Call Us
               </a>

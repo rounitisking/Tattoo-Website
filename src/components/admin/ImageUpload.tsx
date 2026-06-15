@@ -17,6 +17,12 @@ export default function ImageUpload({ value, onChange, label = 'Image' }: ImageU
   const getToken = () => localStorage.getItem('inkrise_admin_token') || '';
 
   const handleFile = async (file: File) => {
+    // Frontend validation: Only MP4 (H.264) is supported for optimal website performance
+    if (file.type.startsWith('video/') && file.type !== 'video/mp4') {
+      alert('Only MP4 videos are supported for optimal website performance.');
+      return;
+    }
+
     setUploading(true);
     const form = new FormData();
     form.append('file', file);
@@ -28,12 +34,15 @@ export default function ImageUpload({ value, onChange, label = 'Image' }: ImageU
       });
       const data = await res.json();
       if (data.url) onChange(data.url);
+      else if (data.error) alert(data.error);
     } catch {
       alert('Upload failed');
     } finally {
       setUploading(false);
     }
   };
+
+  const isVideo = value.endsWith('.mp4') || value.endsWith('.webm') || value.endsWith('.ogg');
 
   return (
     <div className="space-y-2">
@@ -58,7 +67,7 @@ export default function ImageUpload({ value, onChange, label = 'Image' }: ImageU
           type="url"
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          placeholder="https://images.unsplash.com/..."
+          placeholder="https://... or /uploads/..."
           className="form-input"
         />
       ) : (
@@ -70,8 +79,8 @@ export default function ImageUpload({ value, onChange, label = 'Image' }: ImageU
         >
           <Upload size={24} className="text-[#555] mx-auto mb-2" />
           <p className="text-[#888] text-sm font-inter">Drag & drop or click to upload</p>
-          <p className="text-[#555] text-xs mt-1">JPG, PNG, WebP — max 10MB</p>
-          <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={(e) => { const f = e.target.files?.[0]; if (f) handleFile(f); }} />
+          <p className="text-[#555] text-xs mt-1">JPG, PNG, WebP, MP4 — max 50MB</p>
+          <input ref={fileRef} type="file" accept="image/*,video/mp4" className="hidden" onChange={(e) => { const f = e.target.files?.[0]; if (f) handleFile(f); }} />
           {uploading && <p className="text-[#c9a84c] text-xs mt-2 font-inter">Uploading…</p>}
         </div>
       )}
@@ -79,8 +88,12 @@ export default function ImageUpload({ value, onChange, label = 'Image' }: ImageU
       {/* Preview */}
       {value && (
         <div className="relative mt-2 rounded-xl overflow-hidden border border-[#2a2a2a] group" style={{ height: 160 }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={value} alt="Preview" className="w-full h-full object-cover" />
+          {isVideo ? (
+            <video src={value} autoPlay loop muted playsInline preload="metadata" className="w-full h-full object-cover" />
+          ) : (
+            /* eslint-disable-next-line @next/next/no-img-element */
+            <img src={value} alt="Preview" className="w-full h-full object-cover" />
+          )}
           <button
             type="button"
             onClick={() => onChange('')}

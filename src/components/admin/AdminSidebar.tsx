@@ -2,15 +2,16 @@
 
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { LayoutDashboard, Users, Image, FolderOpen, BookOpen, LogOut, ChevronRight } from 'lucide-react';
+import { LayoutDashboard, Users, Image as ImageIcon, FolderOpen, BookOpen, LogOut, ChevronRight, Tag } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navItems = [
   { href: '/admin/dashboard', label: 'Overview', icon: LayoutDashboard },
   { href: '/admin/dashboard/artists', label: 'Artists', icon: Users },
-  { href: '/admin/dashboard/portfolio', label: 'Portfolio', icon: Image },
+  { href: '/admin/dashboard/portfolio', label: 'Portfolio', icon: ImageIcon },
   { href: '/admin/dashboard/categories', label: 'Categories', icon: FolderOpen },
   { href: '/admin/dashboard/collections', label: 'Collections', icon: BookOpen },
+  { href: '/admin/dashboard/offers', label: 'Offers', icon: Tag },
 ];
 
 export default function AdminSidebar() {
@@ -23,7 +24,7 @@ export default function AdminSidebar() {
   };
 
   return (
-    <aside className="w-64 shrink-0 bg-[#0d0d0d] border-r border-[#2a2a2a] flex flex-col h-screen sticky top-0">
+    <aside className="w-64 shrink-0 bg-[#0d0d0d] border-r border-[#2a2a2a] flex flex-col h-[calc(100vh-4rem)] lg:h-[calc(100vh-4.5rem)] xl:h-[calc(100vh-5rem)] sticky top-16 lg:top-[72px] xl:top-20 z-40">
       {/* Logo */}
       <div className="p-6 border-b border-[#2a2a2a]">
         <div className="flex items-center gap-3">
@@ -61,19 +62,19 @@ export default function AdminSidebar() {
       </nav>
 
       {/* Footer */}
-      <div className="p-4 border-t border-[#2a2a2a]">
+      <div className="p-4 border-t border-[#2a2a2a] space-y-1">
         <Link
           href="/"
-          target="_blank"
-          className="flex items-center gap-2 px-3 py-2 text-xs text-[#555] hover:text-[#888] transition-colors rounded-lg mb-2 font-inter"
+          className="w-full flex items-center gap-2 px-3 py-2 text-xs text-[#888] hover:text-[#c9a84c] hover:bg-[#c9a84c]/5 transition-all duration-200 rounded-lg font-inter cursor-pointer"
         >
-          View Live Site →
+          <span className="text-sm shrink-0">🏠</span>
+          Go to Home
         </Link>
         <button
           onClick={handleLogout}
-          className="w-full flex items-center gap-2 px-3 py-2 text-xs text-[#888] hover:text-red-400 hover:bg-red-500/5 transition-all rounded-lg font-inter cursor-pointer"
+          className="w-full flex items-center gap-2 px-3 py-2 text-xs text-[#888] hover:text-red-400 hover:bg-red-500/5 transition-all duration-200 rounded-lg font-inter cursor-pointer"
         >
-          <LogOut size={14} />
+          <LogOut size={14} className="shrink-0" />
           Sign Out
         </button>
       </div>

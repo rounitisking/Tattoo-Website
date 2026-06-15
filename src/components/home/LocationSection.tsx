@@ -1,4 +1,5 @@
 import { Phone, MapPin, Navigation, MessageCircle } from 'lucide-react';
+import Image from 'next/image';
 import { SITE_CONFIG } from '@/constants/site';
 import SectionHeader from '@/components/ui/SectionHeader';
 
@@ -39,7 +40,14 @@ export default function LocationSection() {
                 </div>
                 <div>
                   <h3 className="font-cinzel font-semibold text-[#f5f5f5] mb-2">Studio Address</h3>
-                  <p className="text-[#888] text-sm leading-relaxed font-inter">{SITE_CONFIG.address}</p>
+                  <a
+                    href={SITE_CONFIG.mapLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#888] text-sm leading-relaxed font-inter hover:text-[#c9a84c] transition-colors block"
+                  >
+                    {SITE_CONFIG.address}
+                  </a>
                 </div>
               </div>
 
@@ -90,8 +98,8 @@ export default function LocationSection() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 bg-[#111111] rounded-xl p-4 border border-[#2a2a2a] hover:border-[#25D366]/50 transition-all duration-200 group"
               >
-                <div className="w-9 h-9 rounded-full bg-[#25D366]/10 flex items-center justify-center group-hover:bg-[#25D366]/20 transition-colors">
-                  <MessageCircle size={16} className="text-[#25D366]" />
+                <div className="w-9 h-9 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Image src="/whatsappIcon.webp" alt="WhatsApp" width={24} height={24} className="object-contain" />
                 </div>
                 <div>
                   <p className="text-[#f5f5f5] text-sm font-semibold font-inter">WhatsApp</p>

@@ -55,21 +55,16 @@ export default function ContactPage() {
     setIsSubmitting(true);
 
     // Build WhatsApp message from form data
+    // Build WhatsApp message strictly following user template
     const message = [
-      `🎨 *New Booking Inquiry — Ink Rise Tattoo Studio*`,
+      `Hi, I would like to book a tattoo.`,
       ``,
-      `👤 *Name:* ${formData.name}`,
-      `📞 *Phone:* ${formData.phone}`,
-      `📧 *Email:* ${formData.email}`,
-      formData.placement ? `📍 *Placement:* ${formData.placement}` : null,
-      formData.budget ? `💰 *Budget:* ${formData.budget}` : null,
-      formData.date ? `📅 *Preferred Date:* ${formData.date}` : null,
-      ``,
-      `💡 *Tattoo Idea:*`,
-      formData.idea,
-    ]
-      .filter((line) => line !== null)
-      .join('\n');
+      `Name: ${formData.name}`,
+      `Phone: ${formData.phone}`,
+      `Tattoo Style: ${formData.placement || 'Not specified'}`,
+      `Preferred Date: ${formData.date || 'Not specified'}`,
+      `Message: ${formData.idea} (Budget: ${formData.budget || 'Flexible'}, Email: ${formData.email})`
+    ].join('\n');
 
     const whatsappUrl = `https://wa.me/${SITE_CONFIG.whatsapp}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');

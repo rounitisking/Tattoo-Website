@@ -1,15 +1,23 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
-import { categories } from '@/data/categories';
+import { Category } from '@/types';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 export default function CategoriesSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [categories, setCategories] = useState<Category[]>([]);
+
+  useEffect(() => {
+    fetch('/api/categories', { cache: 'no-store' })
+      .then((r) => r.json())
+      .then((data: Category[]) => setCategories(data))
+      .catch(() => {});
+  }, []);
 
   return (
     <section id="categories" className="section-padding bg-[#0d0d0d]">
@@ -41,8 +49,8 @@ export default function CategoriesSection() {
               transition={{ delay: i * 0.05 }}
               className="snap-child shrink-0"
             >
-              <Link href={`/categories/${category.slug}`}>
-                <div className="relative w-52 h-72 md:w-64 md:h-80 rounded-2xl overflow-hidden border border-[#2a2a2a] hover:border-[#c9a84c]/60 transition-all duration-300 group cursor-pointer card-hover">
+              <Link href={`/categories/${category.slug}`} className="block outline-none">
+                <div className="relative w-52 h-72 md:w-64 md:h-80 rounded-2xl overflow-hidden border border-[#2a2a2a] hover:border-[#c9a84c]/60 hover:scale-[1.02] hover:shadow-[0_8px_30px_rgba(201,168,76,0.15)] active:scale-[0.98] transition-all duration-300 group cursor-pointer card-hover">
                   <Image
                     src={category.image}
                     alt={category.name}
@@ -50,6 +58,7 @@ export default function CategoriesSection() {
                     sizes="(max-width: 768px) 208px, 256px"
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                     loading="lazy"
+                    unoptimized={category.image.startsWith('/uploads/')}
                   />
                   {/* Overlay */}
                   <div className="absolute inset-0 category-card-overlay" />

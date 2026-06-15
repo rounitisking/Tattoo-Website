@@ -24,7 +24,7 @@ export default function AdminShell({ children, title, subtitle }: AdminShellProp
     <div className="flex min-h-screen bg-[#0a0a0a]">
       <AdminSidebar />
       <main className="flex-1 overflow-auto">
-        <div className="border-b border-[#2a2a2a] px-8 py-6 bg-[#0d0d0d]">
+        <div className="border-b border-[#2a2a2a] px-8 py-6 bg-[#0d0d0d] relative z-10">
           <h1 className="font-cinzel font-bold text-2xl text-[#f5f5f5]">{title}</h1>
           {subtitle && <p className="text-[#888] text-sm font-inter mt-1">{subtitle}</p>}
         </div>

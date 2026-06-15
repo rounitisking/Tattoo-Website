@@ -109,3 +109,15 @@ export interface NavItem {
   label: string;
   href: string;
 }
+
+export interface Offer {
+  id: string;
+  title: string;
+  description?: string;
+  mediaUrl: string;
+  mediaType: 'image' | 'video';
+  ctaText?: string;
+  ctaLink?: string;
+  isActive: boolean;
+  order: number;
+}

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, ChevronDown, HelpCircle, Phone, MessageCircle } from 'lucide-react';
 import { faqs } from '@/data/faqs';
@@ -202,7 +203,7 @@ export default function FAQPage() {
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-[#c9a84c] to-[#a07c28] text-black hover:from-[#e8c76a] hover:to-[#c9a84c] rounded-full font-bold text-sm transition-all duration-200 font-inter shadow-md"
               >
-                <MessageCircle size={16} /> Chat on WhatsApp
+                <Image src="/whatsappIcon.webp" alt="WhatsApp" width={20} height={20} className="object-contain" /> Chat on WhatsApp
               </a>
             </div>
           </div>

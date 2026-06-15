@@ -7,7 +7,9 @@ const FILE = 'artists.json';
 
 export async function GET() {
   const artists = readJSON<Artist[]>(FILE);
-  return Response.json(artists);
+  return Response.json(artists, {
+    headers: { 'Cache-Control': 'no-store' },
+  });
 }
 
 export async function POST(req: NextRequest) {

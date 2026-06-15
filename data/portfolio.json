@@ -1,14 +1,134 @@
 [
-  { "id": "p1", "title": "Lion Portrait Realism", "category": "Portrait Tattoo", "categorySlug": "portrait-tattoo", "image": "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?w=600&q=80", "artist": "Aryan Sharma", "width": 600, "height": 800, "description": "Hyper-realistic lion portrait on upper arm" },
-  { "id": "p2", "title": "Sacred Mandala", "category": "Spiritual Tattoo", "categorySlug": "spiritual-tattoo", "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80", "artist": "Priya Nair", "width": 600, "height": 600, "description": "Intricate dotwork mandala on the upper back" },
-  { "id": "p3", "title": "Vibrant Koi Fish", "category": "Colour Tattoo", "categorySlug": "colour-tattoo", "image": "https://images.unsplash.com/photo-1562591229-7b18b44b07df?w=600&q=80", "artist": "Rohan Das", "width": 600, "height": 900, "description": "Neo-traditional Koi fish in vibrant colour" },
-  { "id": "p4", "title": "Geometric Wolf", "category": "Geometric Tattoo", "categorySlug": "geometric-tattoo", "image": "https://images.unsplash.com/photo-1542856204-00101eb6def4?w=600&q=80", "artist": "Priya Nair", "width": 600, "height": 700, "description": "Geometric wolf head in triangular facets" },
-  { "id": "p5", "title": "Butterfly Watercolour", "category": "Butterfly Tattoo", "categorySlug": "butterfly-tattoo", "image": "https://images.unsplash.com/photo-1602524205912-3b9d11c5a9ca?w=600&q=80", "artist": "Rohan Das", "width": 600, "height": 750, "description": "Watercolor butterfly with vibrant splashes" },
-  { "id": "p6", "title": "Eagle Spread Wings", "category": "Eagle Tattoo", "categorySlug": "eagle-tattoo", "image": "https://images.unsplash.com/photo-1559181567-c3190ca9d2c5?w=600&q=80", "artist": "Aryan Sharma", "width": 600, "height": 600, "description": "Realistic eagle in full flight on the chest" },
-  { "id": "p7", "title": "Angel Wings Back", "category": "Angel Tattoo", "categorySlug": "angel-tattoo", "image": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=80", "artist": "Aryan Sharma", "width": 600, "height": 900, "description": "Full-back angel wings with feather detail" },
-  { "id": "p8", "title": "Tiger Realism Portrait", "category": "Animal Tattoo", "categorySlug": "animal-tattoo", "image": "https://images.unsplash.com/photo-1565728744382-61accd4aa148?w=600&q=80", "artist": "Aryan Sharma", "width": 600, "height": 800, "description": "Photorealistic tiger portrait on thigh" },
-  { "id": "p9", "title": "Celtic Arm Band", "category": "Arm Band Tattoo", "categorySlug": "arm-band-tattoo", "image": "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=600&q=80", "artist": "Priya Nair", "width": 600, "height": 500, "description": "Celtic knotwork arm band on forearm" },
-  { "id": "p10", "title": "Arabic Calligraphy", "category": "Calligraphy Tattoo", "categorySlug": "calligraphy-tattoo", "image": "https://images.unsplash.com/photo-1590548784585-643d2b9f2925?w=600&q=80", "artist": "Rohan Das", "width": 600, "height": 650, "description": "Flowing Arabic script on the collarbone" },
-  { "id": "p11", "title": "Minimalist Mountain", "category": "Small Tattoo", "categorySlug": "small-tattoo", "image": "https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?w=600&q=80", "artist": "Priya Nair", "width": 600, "height": 600, "description": "Fine line mountain range on wrist" },
-  { "id": "p12", "title": "Cover Up Rose", "category": "Coverup Tattoo", "categorySlug": "coverup-tattoo", "image": "https://images.unsplash.com/photo-1604881988758-f76ad2f7aac1?w=600&q=80", "artist": "Rohan Das", "width": 600, "height": 800, "description": "Rose bouquet cover-up on upper arm" }
+  {
+    "id": "p1",
+    "title": "Lion Portrait Realism",
+    "category": "Portrait Tattoo",
+    "categorySlug": "portrait-tattoo",
+    "image": "/uploads/mqer4zq7smqi1n.webp",
+    "artist": "Aryan Sharma",
+    "width": 4000,
+    "height": 6000,
+    "description": "Hyper-realistic lion portrait on upper arm"
+  },
+  {
+    "id": "p2",
+    "title": "Sacred Mandala",
+    "category": "Spiritual Tattoo",
+    "categorySlug": "spiritual-tattoo",
+    "image": "/uploads/mqer94l83m1bom.webp",
+    "artist": "Priya Nair",
+    "width": 4000,
+    "height": 6000,
+    "description": "Intricate dotwork mandala on the upper back"
+  },
+  {
+    "id": "p3",
+    "title": "Vibrant Koi Fish",
+    "category": "Colour Tattoo",
+    "categorySlug": "colour-tattoo",
+    "image": "/uploads/mqer6cy025ayb4.webp",
+    "artist": "Rohan Das",
+    "width": 4000,
+    "height": 6000,
+    "description": "Neo-traditional Koi fish in vibrant colour"
+  },
+  {
+    "id": "p4",
+    "title": "GeometricTattoo",
+    "category": "Geometric Tattoo",
+    "categorySlug": "geometric-tattoo",
+    "image": "/uploads/mqercjrv0s9d4g.webp",
+    "artist": "Priya Nair",
+    "width": 4000,
+    "height": 6000,
+    "description": "Geometric wolf head in triangular facets"
+  },
+  {
+    "id": "p5",
+    "title": "Butterfly Watercolour",
+    "category": "Butterfly Tattoo",
+    "categorySlug": "butterfly-tattoo",
+    "image": "/uploads/mqerdlhx7u2fc8.webp",
+    "artist": "Rohan Das",
+    "width": 4024,
+    "height": 6048,
+    "description": "Watercolor butterfly with vibrant splashes"
+  },
+  {
+    "id": "p6",
+    "title": "Eagle Spread Wings",
+    "category": "Eagle Tattoo",
+    "categorySlug": "eagle-tattoo",
+    "image": "/uploads/mqerem1sutqepl.webp",
+    "artist": "Aryan Sharma",
+    "width": 3689,
+    "height": 5504,
+    "description": "Realistic eagle in full flight on the chest"
+  },
+  {
+    "id": "p7",
+    "title": "Angel Wings Back",
+    "category": "Angel Tattoo",
+    "categorySlug": "angel-tattoo",
+    "image": "/uploads/mqerfgyievrj1o.webp",
+    "artist": "Aryan Sharma",
+    "width": 3744,
+    "height": 5616,
+    "description": "Full-back angel wings with feather detail"
+  },
+  {
+    "id": "p8",
+    "title": "Tiger Realism Portrait",
+    "category": "Animal Tattoo",
+    "categorySlug": "animal-tattoo",
+    "image": "/uploads/mqersnzywws0hr.webp",
+    "artist": "Aryan Sharma",
+    "width": 3113,
+    "height": 4670,
+    "description": "Photorealistic tiger portrait on thigh"
+  },
+  {
+    "id": "p9",
+    "title": "Celtic Arm Band",
+    "category": "Arm Band Tattoo",
+    "categorySlug": "arm-band-tattoo",
+    "image": "/uploads/mqertxyan804n2.webp",
+    "artist": "Priya Nair",
+    "width": 3573,
+    "height": 5359,
+    "description": "Celtic knotwork arm band on forearm"
+  },
+  {
+    "id": "p10",
+    "title": "Arabic Calligraphy",
+    "category": "Calligraphy Tattoo",
+    "categorySlug": "calligraphy-tattoo",
+    "image": "/uploads/mqerx4jlmpk91g.webp",
+    "artist": "Rohan Das",
+    "width": 4080,
+    "height": 3264,
+    "description": "Flowing Arabic script on the collarbone"
+  },
+  {
+    "id": "p11",
+    "title": "Minimalist Mountain",
+    "category": "Small Tattoo",
+    "categorySlug": "small-tattoo",
+    "image": "/uploads/mqerxz61rssju7.webp",
+    "artist": "Priya Nair",
+    "width": 3744,
+    "height": 5616,
+    "description": "Fine line mountain range on wrist"
+  },
+  {
+    "id": "p12",
+    "title": "Cover Up Rose",
+    "category": "Coverup Tattoo",
+    "categorySlug": "coverup-tattoo",
+    "image": "/uploads/mqeryxbl3q47ca.webp",
+    "artist": "Rohan Das",
+    "width": 3024,
+    "height": 4032,
+    "description": "Rose bouquet cover-up on upper arm"
+  }
 ]

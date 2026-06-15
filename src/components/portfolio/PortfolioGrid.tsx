@@ -1,11 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react';
-import { portfolioItems } from '@/data/portfolio';
-import { cn } from '@/lib/utils';
+import { PortfolioItem } from '@/types';
 
 const filterOptions = [
   { label: 'All', value: 'all' },
@@ -21,6 +20,18 @@ const filterOptions = [
 export default function PortfolioGrid({ slug }: { slug?: string }) {
   const [activeFilter, setActiveFilter] = useState(slug || 'all');
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [portfolioItems, setPortfolioItems] = useState<PortfolioItem[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('/api/portfolio', { cache: 'no-store' })
+      .then((r) => r.json())
+      .then((items: PortfolioItem[]) => {
+        setPortfolioItems(items);
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
+  }, []);
 
   const filtered = activeFilter === 'all'
     ? portfolioItems
@@ -30,6 +41,18 @@ export default function PortfolioGrid({ slug }: { slug?: string }) {
   const closeLightbox = () => setLightboxIndex(null);
   const prev = () => setLightboxIndex((i) => (i !== null && i > 0 ? i - 1 : filtered.length - 1));
   const next = () => setLightboxIndex((i) => (i !== null && i < filtered.length - 1 ? i + 1 : 0));
+
+  if (loading) {
+    return (
+      <div className="masonry-grid">
+        {Array.from({ length: 8 }).map((_, i) => (
+          <div key={i} className="masonry-item">
+            <div className="portfolio-card bg-[#1a1a1a] animate-pulse" style={{ aspectRatio: '3/4' }} />
+          </div>
+        ))}
+      </div>
+    );
+  }
 
   return (
     <>
@@ -73,6 +96,7 @@ export default function PortfolioGrid({ slug }: { slug?: string }) {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover"
                   loading="lazy"
+                  unoptimized={item.image.startsWith('/uploads/')}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -136,6 +160,7 @@ export default function PortfolioGrid({ slug }: { slug?: string }) {
                   sizes="(max-width: 768px) 100vw, 768px"
                   className="object-contain rounded-xl"
                   priority
+                  unoptimized={filtered[lightboxIndex].image.startsWith('/uploads/')}
                 />
               </div>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-xl">

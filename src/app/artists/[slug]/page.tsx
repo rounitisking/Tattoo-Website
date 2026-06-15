@@ -1,11 +1,12 @@
-import { Metadata } from 'next';
+'use client';
+
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import { use } from 'react';
 import { ChevronLeft, Award, Briefcase } from 'lucide-react';
 import { Instagram } from '@/components/ui/SocialIcons';
-import { artists } from '@/data/artists';
-import { portfolioItems } from '@/data/portfolio';
+import { Artist, PortfolioItem } from '@/types';
 import CTABanner from '@/components/home/CTABanner';
 import { SITE_CONFIG } from '@/constants/site';
 
@@ -13,26 +14,46 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
-export async function generateStaticParams() {
-  return artists.map((a) => ({ slug: a.slug }));
-}
+export default function ArtistPage({ params }: Props) {
+  const { slug } = use(params);
+  const [artist, setArtist] = useState<Artist | null>(null);
+  const [artistPortfolio, setArtistPortfolio] = useState<PortfolioItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [notFound, setNotFound] = useState(false);
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const artist = artists.find((a) => a.slug === slug);
-  if (!artist) return { title: 'Artist Not Found' };
-  return {
-    title: `${artist.name} — ${artist.specialty}`,
-    description: artist.bio.slice(0, 160),
-  };
-}
+  useEffect(() => {
+    Promise.all([
+      fetch('/api/artists', { cache: 'no-store' }).then((r) => r.json()),
+      fetch('/api/portfolio', { cache: 'no-store' }).then((r) => r.json()),
+    ])
+      .then(([artists, portfolio]: [Artist[], PortfolioItem[]]) => {
+        const found = artists.find((a) => a.slug === slug);
+        if (!found) { setNotFound(true); setLoading(false); return; }
+        setArtist(found);
+        setArtistPortfolio(
+          portfolio.filter((p) => p.artist === found.name).slice(0, 6)
+        );
+        setLoading(false);
+      })
+      .catch(() => { setNotFound(true); setLoading(false); });
+  }, [slug]);
 
-export default async function ArtistPage({ params }: Props) {
-  const { slug } = await params;
-  const artist = artists.find((a) => a.slug === slug);
-  if (!artist) notFound();
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="w-8 h-8 border-2 border-[#c9a84c] border-t-transparent rounded-full animate-spin" />
+      </div>
+    );
+  }
 
-  const artistPortfolio = portfolioItems.filter((p) => p.artist === artist.name).slice(0, 6);
+  if (notFound || !artist) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center text-center px-4">
+        <h1 className="font-cinzel text-3xl text-[#f5f5f5] mb-4">Artist Not Found</h1>
+        <Link href="/artists" className="text-[#c9a84c] hover:underline">← Back to Artists</Link>
+      </div>
+    );
+  }
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -65,6 +86,7 @@ export default async function ArtistPage({ params }: Props) {
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover object-top"
                   priority
+                  unoptimized={artist.photo.startsWith('/uploads/')}
                 />
               </div>
             </div>
@@ -119,7 +141,7 @@ export default async function ArtistPage({ params }: Props) {
               {/* Awards */}
               {artist.awards.length > 0 && (
                 <>
-                  <h2 className="font-cinzel font-semibold text-[#f5f5f5] text-base mb-3">Awards & Recognition</h2>
+                  <h2 className="font-cinzel font-semibold text-[#f5f5f5] text-base mb-3">Awards &amp; Recognition</h2>
                   <ul className="space-y-2">
                     {artist.awards.map((award) => (
                       <li key={award} className="flex items-start gap-2 text-sm text-[#888] font-inter">
@@ -164,6 +186,7 @@ export default async function ArtistPage({ params }: Props) {
                     sizes="(max-width: 768px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
+                    unoptimized={item.image.startsWith('/uploads/')}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <p className="absolute bottom-3 left-3 text-white text-xs font-semibold font-cinzel opacity-0 group-hover:opacity-100 transition-opacity">{item.title}</p>

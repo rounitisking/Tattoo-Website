@@ -1,0 +1,74 @@
+[
+  {
+    "id": "r1",
+    "name": "Rahul Verma",
+    "avatar": "",
+    "rating": 5,
+    "text": "Absolutely blown away by the work at Ink Rise! Aryan did my portrait tattoo and it looks exactly like the reference photo. The studio is super clean, hygienic, and the vibe is just perfect. Would recommend to anyone looking for premium tattoo work in Noida.",
+    "date": "2 weeks ago",
+    "verified": true
+  },
+  {
+    "id": "r2",
+    "name": "Sneha Kapoor",
+    "avatar": "",
+    "rating": 5,
+    "text": "Got my mandala tattoo done by Priya and I cannot stop staring at it! The precision and symmetry is just mind-blowing. The team is so welcoming and professional. Ink Rise is definitely the best tattoo studio I have visited.",
+    "date": "1 month ago",
+    "verified": true
+  },
+  {
+    "id": "r3",
+    "name": "Vikram Singh",
+    "avatar": "",
+    "rating": 5,
+    "text": "Got a full sleeve done here over 3 sessions. Rohan is an absolute genius with colour work. Each session was comfortable and the healing has been amazing with their aftercare guidance. 10/10 would definitely recommend!",
+    "date": "3 weeks ago",
+    "verified": true
+  },
+  {
+    "id": "r4",
+    "name": "Ananya Gupta",
+    "avatar": "",
+    "rating": 5,
+    "text": "I was really nervous about getting my first tattoo but the artists at Ink Rise made me feel so comfortable. Got a small butterfly on my wrist and it is gorgeous. Very hygienic setup. Will definitely come back for more!",
+    "date": "2 months ago",
+    "verified": true
+  },
+  {
+    "id": "r5",
+    "name": "Karan Mehta",
+    "avatar": "",
+    "rating": 5,
+    "text": "Had a cover-up done at Ink Rise. Rohan completely transformed my old faded tattoo into a beautiful Japanese dragon piece. I cannot believe how perfectly he concealed the old work. Truly talented artists here.",
+    "date": "5 weeks ago",
+    "verified": true
+  },
+  {
+    "id": "r6",
+    "name": "Preethi Nambiar",
+    "avatar": "",
+    "rating": 5,
+    "text": "The piercing service is exceptional! Got a helix and a septum piercing. Super professional, used sterilized equipment, and the jewelry quality is premium. The aftercare advice they gave is very detailed and helpful.",
+    "date": "1 month ago",
+    "verified": true
+  },
+  {
+    "id": "r7",
+    "name": "Aditya Rawat",
+    "avatar": "",
+    "rating": 5,
+    "text": "Aryan did a realistic wolf portrait on my forearm and people cannot believe it is a tattoo! The detail in the fur and eyes is just incredible. The studio is top-notch and the overall experience was fantastic.",
+    "date": "3 months ago",
+    "verified": true
+  },
+  {
+    "id": "r8",
+    "name": "Riya Sharma",
+    "avatar": "",
+    "rating": 5,
+    "text": "Priya designed a custom geometric piece for me and it perfectly matches my vision. She added elements I hadn't thought of that made it even more beautiful. The consultation process is thorough and thoughtful.",
+    "date": "6 weeks ago",
+    "verified": true
+  }
+]

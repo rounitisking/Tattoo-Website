@@ -6,7 +6,9 @@ import { Category } from '@/types';
 const FILE = 'categories.json';
 
 export async function GET() {
-  return Response.json(readJSON<Category[]>(FILE));
+  return Response.json(readJSON<Category[]>(FILE), {
+    headers: { 'Cache-Control': 'no-store' },
+  });
 }
 
 export async function POST(req: NextRequest) {

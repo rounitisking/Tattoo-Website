@@ -6,7 +6,9 @@ import { PortfolioItem } from '@/types';
 const FILE = 'portfolio.json';
 
 export async function GET() {
-  return Response.json(readJSON<PortfolioItem[]>(FILE));
+  return Response.json(readJSON<PortfolioItem[]>(FILE), {
+    headers: { 'Cache-Control': 'no-store' },
+  });
 }
 
 export async function POST(req: NextRequest) {

@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import Image from 'next/image';
+import { Phone, Mail, MapPin } from 'lucide-react';
 import { Instagram, Facebook, Youtube } from '@/components/ui/SocialIcons';
 import { SITE_CONFIG, NAV_ITEMS } from '@/constants/site';
 
@@ -56,10 +57,16 @@ export default function Footer() {
                 href={`https://wa.me/${SITE_CONFIG.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-[#1a1a1a] border border-[#2a2a2a] flex items-center justify-center text-[#888] hover:text-[#25D366] hover:border-[#25D366] transition-all duration-200"
+                className="w-9 h-9 rounded-full bg-[#1a1a1a] border border-[#2a2a2a] flex items-center justify-center hover:border-[#25D366] transition-all duration-200 group"
                 aria-label="WhatsApp"
               >
-                <MessageCircle size={15} />
+                <Image 
+                  src="/whatsappIcon.webp" 
+                  alt="WhatsApp" 
+                  width={16} 
+                  height={16} 
+                  className="object-contain group-hover:scale-110 transition-transform duration-200"
+                />
               </a>
             </div>
           </div>
@@ -105,7 +112,14 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={15} className="text-[#c9a84c] mt-0.5 shrink-0" />
-                <span className="text-[#888] text-sm leading-relaxed">{SITE_CONFIG.address}</span>
+                <a
+                  href={SITE_CONFIG.mapLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#888] text-sm leading-relaxed hover:text-[#c9a84c] transition-colors"
+                >
+                  {SITE_CONFIG.address}
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={15} className="text-[#c9a84c] shrink-0" />
@@ -130,13 +144,21 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-[#1f1f1f]">
-        <div className="container-custom py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-[#555] text-xs">
+        <div className="container-custom py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-[#555] text-xs font-inter text-center md:text-left">
             &copy; {SITE_CONFIG.year} {SITE_CONFIG.name}. All rights reserved.
           </p>
-          <p className="text-[#555] text-xs">
-            Crafted with <span className="text-[#c9a84c]">♥</span> for ink lovers
-          </p>
+          <div className="flex flex-col items-center md:items-end gap-1.5">
+            <p className="text-[#555] text-xs font-inter text-center md:text-right">
+              Crafted with <span className="text-[#c9a84c]">♥</span> for ink lovers
+            </p>
+            <p className="text-[#444] text-[10px] uppercase tracking-widest font-inter text-center md:text-right">
+              Developed by <span className="text-[#666] font-semibold">ROUNIT SINGH</span> <span className="mx-1 text-[#333]">|</span> Contact:{' '}
+              <a href="tel:9821770032" className="hover:text-[#c9a84c] transition-colors inline-block">
+                9821770032
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

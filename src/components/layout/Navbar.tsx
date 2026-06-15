@@ -33,6 +33,10 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ''; };
   }, [isMenuOpen]);
 
+  if (pathname?.startsWith('/admin')) {
+    return null;
+  }
+
   return (
     <>
       <header
@@ -60,26 +64,32 @@ export default function Navbar() {
 
             {/* Desktop Nav */}
               <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
-              {NAV_ITEMS.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={cn(
-                      'px-4 xl:px-5 py-2 text-base font-semibold tracking-wide transition-colors duration-200 rounded-md relative group',
-                    pathname === item.href
-                      ? 'text-[#c9a84c]'
-                      : 'text-[#cccccc] hover:text-[#f5f5f5]'
-                  )}
-                >
-                  {item.label}
-                  <span
+              {NAV_ITEMS.map((item) => {
+                const isOffers = item.label === 'Offers';
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
                     className={cn(
-                      'absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-[#c9a84c] to-[#e8c76a] transition-all duration-300',
-                      pathname === item.href ? 'w-2/3' : 'w-0 group-hover:w-2/3'
+                      'px-4 xl:px-5 py-2 text-base font-semibold tracking-wide transition-colors duration-200 rounded-md relative group',
+                      isOffers 
+                        ? 'text-red-500 animate-pulse drop-shadow-[0_0_8px_rgba(239,68,68,0.8)]' 
+                        : pathname === item.href
+                          ? 'text-[#c9a84c]'
+                          : 'text-[#cccccc] hover:text-[#f5f5f5]'
                     )}
-                  />
-                </Link>
-              ))}
+                  >
+                    {item.label}
+                    <span
+                      className={cn(
+                        'absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 transition-all duration-300',
+                        isOffers ? 'bg-red-500' : 'bg-gradient-to-r from-[#c9a84c] to-[#e8c76a]',
+                        pathname === item.href ? 'w-2/3' : 'w-0 group-hover:w-2/3'
+                      )}
+                    />
+                  </Link>
+                );
+              })}
             </nav>
 
             {/* Desktop CTA */}
@@ -157,26 +167,32 @@ export default function Navbar() {
 
               {/* Drawer Nav */}
               <nav className="flex-1 overflow-y-auto py-4">
-                {NAV_ITEMS.map((item, i) => (
-                  <motion.div
-                    key={item.href}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.05 + 0.1 }}
-                  >
-                    <Link
-                      href={item.href}
-                      className={cn(
-                        'flex items-center px-6 py-3.5 text-sm font-medium tracking-wide border-l-2 transition-all duration-200',
-                        pathname === item.href
-                          ? 'text-[#c9a84c] border-[#c9a84c] bg-[#c9a84c]/5'
-                          : 'text-[#cccccc] border-transparent hover:text-[#f5f5f5] hover:border-[#c9a84c]/50 hover:bg-white/5'
-                      )}
+                {NAV_ITEMS.map((item, i) => {
+                  const isOffers = item.label === 'Offers';
+                  return (
+                    <motion.div
+                      key={item.href}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.05 + 0.1 }}
                     >
-                      {item.label}
-                    </Link>
-                  </motion.div>
-                ))}
+                      <Link
+                        href={item.href}
+                        className={cn(
+                          'flex items-center px-6 py-3.5 text-sm font-medium tracking-wide border-l-2 transition-all duration-200',
+                          isOffers
+                            ? 'text-red-500 border-red-500 bg-red-500/10 shadow-[inset_4px_0_10px_rgba(239,68,68,0.2)]'
+                            : pathname === item.href
+                              ? 'text-[#c9a84c] border-[#c9a84c] bg-[#c9a84c]/5'
+                              : 'text-[#cccccc] border-transparent hover:text-[#f5f5f5] hover:border-[#c9a84c]/50 hover:bg-white/5'
+                        )}
+                      >
+                        {item.label}
+                        {isOffers && <span className="ml-2 w-2 h-2 rounded-full bg-red-500 animate-pulse" />}
+                      </Link>
+                    </motion.div>
+                  );
+                })}
               </nav>
 
               {/* Drawer Footer */}

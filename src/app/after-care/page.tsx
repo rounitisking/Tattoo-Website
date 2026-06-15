@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ShieldCheck, AlertOctagon, CheckCircle2, Clock, Calendar, Bookmark, Info } from 'lucide-react';
 import { afterCareContent } from '@/data/aftercare';
 import { SITE_CONFIG } from '@/constants/site';
+import AftercareVideo from '@/components/after-care/AftercareVideo';
 
 export default function AfterCarePage() {
   const [lang, setLang] = useState<'en' | 'hi'>('en');
@@ -46,23 +47,23 @@ export default function AfterCarePage() {
           </p>
 
           {/* Language Toggle */}
-          <div className="inline-flex p-1 bg-[#111111] border border-[#2a2a2a] rounded-full">
+          <div className="inline-flex p-1.5 bg-[#111111] border border-[#2a2a2a] rounded-full gap-2 shadow-lg mb-10">
             <button
               onClick={() => setLang('en')}
-              className={`px-6 py-2 rounded-full text-xs md:text-sm font-semibold transition-all duration-200 font-inter cursor-pointer ${
+              className={`px-8 py-3 rounded-full text-sm md:text-base font-semibold transition-all duration-300 font-inter cursor-pointer ${
                 lang === 'en'
-                  ? 'bg-[#c9a84c] text-black shadow-md'
-                  : 'text-[#888] hover:text-[#f5f5f5]'
+                  ? 'bg-[#c9a84c] text-black shadow-[0_0_15px_rgba(201,168,76,0.3)]'
+                  : 'text-[#888] hover:text-[#f5f5f5] hover:bg-[#1a1a1a]'
               }`}
             >
               English
             </button>
             <button
               onClick={() => setLang('hi')}
-              className={`px-6 py-2 rounded-full text-xs md:text-sm font-semibold transition-all duration-200 font-inter cursor-pointer ${
+              className={`px-8 py-3 rounded-full text-sm md:text-base font-semibold transition-all duration-300 font-inter cursor-pointer ${
                 lang === 'hi'
-                  ? 'bg-[#c9a84c] text-black shadow-md'
-                  : 'text-[#888] hover:text-[#f5f5f5]'
+                  ? 'bg-[#c9a84c] text-black shadow-[0_0_15px_rgba(201,168,76,0.3)]'
+                  : 'text-[#888] hover:text-[#f5f5f5] hover:bg-[#1a1a1a]'
               }`}
             >
               हिंदी (Hindi)
@@ -73,6 +74,8 @@ export default function AfterCarePage() {
 
       <section className="section-padding bg-[#0a0a0a]">
         <div className="container-custom max-w-5xl">
+          {/* Cinematic Video Separator */}
+          <AftercareVideo />
           <AnimatePresence mode="wait">
             <motion.div
               key={lang}

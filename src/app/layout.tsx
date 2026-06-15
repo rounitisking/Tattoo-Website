@@ -57,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-[#0a0a0a] text-[#f5f5f5] font-inter antialiased">
         <ThemeProvider>
           <Navbar />
-          <main className="pt-20 lg:pt-24 xl:pt-28">{children}</main>
+          <main>{children}</main>
           <Footer />
           <WhatsAppFloat />
         </ThemeProvider>
