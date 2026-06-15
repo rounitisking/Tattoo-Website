@@ -24,13 +24,26 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col overflow-hidden bg-[#0a0a0a] pt-24 lg:pt-28"
+      className="relative min-h-screen flex flex-col overflow-hidden bg-[#0a0a0a]"
     >
       {/* Background gradient orbs */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#c9a84c]/5 rounded-full blur-[120px]" />
         <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-[#c9a84c]/5 rounded-full blur-[100px]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#c9a84c]/3 rounded-full blur-[160px]" />
+      </div>
+
+      {/* Cover Image Section */}
+      <div className="w-full pt-16 lg:pt-[72px] xl:pt-20 shrink-0 relative z-20 border-b border-[#1f1f1f]">
+        <div className="relative w-full h-[160px] md:h-[180px] lg:h-[200px]">
+          <Image
+            src="/coverphoto.webp"
+            alt="Ink Rise Studio Cover"
+            fill
+            priority
+            className="object-cover"
+          />
+        </div>
       </div>
 
 <div className="container-custom pt-44 lg:pt-52 xl:pt-56 pb-8 relative z-10">
