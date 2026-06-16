@@ -17,9 +17,7 @@ const GOOGLE_PLACE_ID = process.env.NEXT_PUBLIC_GOOGLE_PLACE_ID || 'YOUR_PLACE_I
 
 // The deep-link that opens Google Maps directly to the "Write a review" dialog
 const googleReviewLink =
-  GOOGLE_PLACE_ID !== 'YOUR_PLACE_ID_HERE'
-    ? `https://search.google.com/local/writereview?placeid=${GOOGLE_PLACE_ID}`
-    : 'https://share.google/tcQbFLmllbSwLIyhV'; // Fallback to business profile link
+  'https://www.google.com/search?q=ink+rise+tattoo+studio&oq=ink&gs_lcrp=EgZjaHJvbWUqDwgAECMYJxjjAhiABBiKBTIPCAAQIxgnGOMCGIAEGIoFMhUIARAuGCcYrwEYxwEYgAQYigUYjgUyBggCEEUYOTIGCAMQRRg7MgYIBBBFGD0yBggFEEUYPTIGCAYQRRg9MgYIBxBFGDzSAQgxNTYyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#mpd=~17431290877259491451/customers/reviews';
 
 export const SITE_CONFIG = {
   name: 'Ink Rise Tattoo Studio',

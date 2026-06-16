@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone } from 'lucide-react';
 import { NAV_ITEMS, SITE_CONFIG } from '@/constants/site';
 import { cn } from '@/lib/utils';
-import ThemeToggle from '@/components/ui/ThemeToggle';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -94,7 +93,6 @@ export default function Navbar() {
 
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
-              <ThemeToggle />
               <Link
                 href="/admin/login"
                 className="px-6 py-2.5 text-base font-semibold text-[#777] hover:text-[#f5f5f5] border border-[#444] hover:border-[#c9a84c] rounded-xl transition-all duration-200 font-inter"
@@ -118,7 +116,6 @@ export default function Navbar() {
 
             {/* Mobile Actions */}
             <div className="flex lg:hidden items-center gap-2">
-              <ThemeToggle />
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="w-10 h-10 flex items-center justify-center text-[#f5f5f5] hover:text-[#c9a84c] transition-colors"

@@ -6,28 +6,18 @@
   --font-cinzel: 'Cinzel', serif;
   --font-inter: 'Inter', sans-serif;
 
-  --bg-primary: #0a0a0a;
-  --bg-surface: #111111;
-  --bg-card: #1a1a1a;
-  --border: #2a2a2a;
-  --accent-gold: #c9a84c;
-  --accent-gold-light: #e8c76a;
-  --text-primary: #f5f5f5;
-  --text-muted: #888888;
-  --text-dim: #cccccc;
-}
-
-.light {
   --bg-primary: #fafafa;
   --bg-surface: #ffffff;
   --bg-card: #f5f5f5;
   --border: #e5e5e5;
+  --accent-gold: #c9a84c;
+  --accent-gold-light: #e8c76a;
   --text-primary: #171717;
   --text-muted: #737373;
   --text-dim: #404040;
 }
 
-
+/* Base resets */
 html {
   scroll-behavior: smooth;
 }
@@ -65,7 +55,7 @@ body {
 /* Text Selection */
 ::selection {
   background: var(--accent-gold);
-  color: #0a0a0a;
+  color: #fafafa;
 }
 
 /* Gold Gradient Text */
@@ -134,8 +124,8 @@ body {
 .page-hero {
   padding-top: 6rem;
   padding-bottom: 4rem;
-  background: #0d0d0d;
-  border-bottom: 1px solid #2a2a2a;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
 }
 
 @media (min-width: 1024px) {
@@ -156,18 +146,18 @@ body {
    NAVBAR — Always visible, semi-transparent
    ============================================ */
 .navbar-scrolled {
-  background: rgba(10, 10, 10, 0.95);
+  background: rgba(250, 250, 250, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid #2a2a2a;
-  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.05);
 }
 
 .navbar-default {
-  background: rgba(10, 10, 10, 0.85);
+  background: rgba(250, 250, 250, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(42, 42, 42, 0.5);
+  border-bottom: 1px solid rgba(229, 229, 229, 0.5);
 }
 
 /* Gold Divider */
@@ -200,9 +190,9 @@ body {
   font-size: 0.875rem;
   font-weight: 500;
   font-family: var(--font-inter);
-  border: 1px solid #2a2a2a;
+  border: 1px solid var(--border);
   background: transparent;
-  color: #888;
+  color: var(--text-muted);
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
@@ -211,7 +201,7 @@ body {
 
 .filter-btn:hover {
   border-color: rgba(201, 168, 76, 0.5);
-  color: #f5f5f5;
+  color: var(--text-primary);
   background: rgba(201, 168, 76, 0.05);
 }
 
@@ -294,11 +284,18 @@ body {
 .lightbox-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(255, 255, 255, 0.98) !important;
   z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.lightbox-overlay button {
+  background: rgba(0, 0, 0, 0.1) !important;
+  color: #000 !important;
+}
+.lightbox-overlay button:hover {
+  background: rgba(0, 0, 0, 0.2) !important;
 }
 
 /* Nav active indicator */
@@ -378,14 +375,14 @@ body {
 
 /* Category card gradient overlay */
 .category-card-overlay {
-  background: linear-gradient(to top, rgba(10,10,10,0.9) 0%, rgba(10,10,10,0.4) 50%, rgba(10,10,10,0.1) 100%);
+  background: linear-gradient(to top, rgba(250,250,250,0.9) 0%, rgba(250,250,250,0.4) 50%, rgba(250,250,250,0.1) 100%);
 }
 
 /* Form focus styles */
 .form-input {
-  background: #1a1a1a;
-  border: 1px solid #2a2a2a;
-  color: #f5f5f5;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
   border-radius: 8px;
   padding: 0.875rem 1rem;
   width: 100%;
@@ -401,7 +398,7 @@ body {
 }
 
 .form-input::placeholder {
-  color: #666;
+  color: var(--text-muted);
 }
 
 /* Review card star */
@@ -418,98 +415,78 @@ body {
   scroll-snap-align: start;
 }
 
-/* Light mode overrides for hardcoded utility classes */
-html.light body,
-.light {
+/* Permanent light mode overrides for hardcoded dark mode tailwind classes */
+body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
 }
 
-.light .bg-\[\#0a0a0a\] {
+.bg-\[\#0a0a0a\] {
   background-color: var(--bg-primary) !important;
 }
 
-.light .bg-\[\#111111\] {
+.bg-\[\#111111\] {
   background-color: var(--bg-surface) !important;
 }
 
-.light .bg-\[\#1a1a1a\] {
+.bg-\[\#1a1a1a\] {
   background-color: var(--bg-card) !important;
 }
 
-.light .bg-\[\#0d0d0d\] {
+.bg-\[\#0d0d0d\] {
   background-color: var(--bg-surface) !important;
 }
 
-.light .text-\[\#f5f5f5\] {
+.text-\[\#f5f5f5\] {
   color: var(--text-primary) !important;
 }
 
-.light .text-\[\#888\] {
+.text-\[\#888\],
+.text-\[\#888888\] {
   color: var(--text-muted) !important;
 }
 
-.light .text-\[\#888888\] {
-  color: var(--text-muted) !important;
-}
-
-.light .text-\[\#cccccc\] {
+.text-\[\#cccccc\],
+.text-\[\#ccc\] {
   color: var(--text-dim) !important;
 }
 
-.light .text-\[\#ccc\] {
-  color: var(--text-dim) !important;
-}
-
-.light .border-\[\#2a2a2a\] {
+.border-\[\#2a2a2a\] {
   border-color: var(--border) !important;
 }
 
-.light .text-\[\#555\] {
+.text-\[\#555\] {
   color: #737373 !important;
 }
 
-.light .text-\[\#666\] {
+.text-\[\#666\] {
   color: #525252 !important;
 }
 
-.light .bg-black\/70 {
+.bg-black\/70 {
   background-color: rgba(255, 255, 255, 0.7) !important;
 }
 
-.light .bg-black\/60 {
+.bg-black\/60 {
   background-color: rgba(255, 255, 255, 0.6) !important;
 }
 
-.light .border-white\/10 {
+.border-white\/10 {
   border-color: var(--border) !important;
 }
 
-.light .bg-gradient-to-t {
+.bg-gradient-to-t {
   background-image: linear-gradient(to top, rgba(250, 250, 250, 0.9) 0%, rgba(250, 250, 250, 0.4) 50%, rgba(250, 250, 250, 0.1) 100%) !important;
-}
-
-.light .lightbox-overlay {
-  background: rgba(255, 255, 255, 0.98) !important;
-}
-
-.light .lightbox-overlay button {
-  background: rgba(0, 0, 0, 0.1) !important;
-  color: #000 !important;
-}
-
-.light .lightbox-overlay button:hover {
-  background: rgba(0, 0, 0, 0.2) !important;
 }
 
 /* Admin form input */
 .form-input {
   width: 100%;
-  background: #0d0d0d;
-  border: 1px solid #2a2a2a;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   border-radius: 0.75rem;
   padding: 0.625rem 0.875rem;
-  color: #f5f5f5;
+  color: var(--text-primary);
   font-size: 0.875rem;
   font-family: var(--font-inter), sans-serif;
   transition: border-color 0.2s, box-shadow 0.2s;
@@ -520,7 +497,7 @@ html.light body,
   box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
 }
 .form-input::placeholder {
-  color: #444;
+  color: var(--text-muted);
 }
 
 /* ============================================

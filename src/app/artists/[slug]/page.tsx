@@ -27,7 +27,8 @@ export default function ArtistPage({ params }: Props) {
       fetch('/api/portfolio', { cache: 'no-store' }).then((r) => r.json()),
     ])
       .then(([artists, portfolio]: [Artist[], PortfolioItem[]]) => {
-        const found = artists.find((a) => a.slug === slug);
+        const decodedSlug = decodeURIComponent(slug);
+        const found = artists.find((a) => a.slug === decodedSlug || a.slug === slug);
         if (!found) { setNotFound(true); setLoading(false); return; }
         setArtist(found);
         setArtistPortfolio(

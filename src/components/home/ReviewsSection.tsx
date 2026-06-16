@@ -41,17 +41,9 @@ export default function ReviewsSection() {
   const reviews = data?.reviews ?? [];
   const isGoogleSource = data?.source === 'google';
 
-  // Use Google's real rating if available, otherwise compute from our data
-  const displayRating =
-    data?.placeRating != null
-      ? data.placeRating.toFixed(1)
-      : reviews.length > 0
-      ? (reviews.reduce((s, r) => s + r.rating, 0) / reviews.length).toFixed(1)
-      : '5.0';
-
-  // Use Google's total count if available
-  const displayCount =
-    data?.totalRatings != null ? data.totalRatings : reviews.length;
+  // Hardcode rating and count as requested
+  const displayRating = '5.0';
+  const displayCount = 125;
 
   return (
     <section id="reviews" className="section-padding bg-[#0d0d0d]">

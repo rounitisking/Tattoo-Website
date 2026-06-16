@@ -4,7 +4,6 @@ import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
-import { ThemeProvider } from '@/components/layout/ThemeProvider';
 import { SITE_CONFIG } from '@/constants/site';
 
 const inter = Inter({
@@ -55,12 +54,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${cinzel.variable}`}>
       <body className="bg-[#0a0a0a] text-[#f5f5f5] font-inter antialiased">
-        <ThemeProvider>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-          <WhatsAppFloat />
-        </ThemeProvider>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+        <WhatsAppFloat />
       </body>
     </html>
   );
