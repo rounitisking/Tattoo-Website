@@ -4,7 +4,8 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { use } from 'react';
-import { ChevronLeft, Award, Briefcase } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Award, Briefcase, X, ZoomIn } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Instagram } from '@/components/ui/SocialIcons';
 import { Artist, PortfolioItem } from '@/types';
 import CTABanner from '@/components/home/CTABanner';
@@ -20,6 +21,7 @@ export default function ArtistPage({ params }: Props) {
   const [artistPortfolio, setArtistPortfolio] = useState<PortfolioItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   useEffect(() => {
     Promise.all([
@@ -32,7 +34,7 @@ export default function ArtistPage({ params }: Props) {
         if (!found) { setNotFound(true); setLoading(false); return; }
         setArtist(found);
         setArtistPortfolio(
-          portfolio.filter((p) => p.artist === found.name).slice(0, 6)
+          portfolio.filter((p) => p.artist === found.name)
         );
         setLoading(false);
       })
@@ -175,28 +177,98 @@ export default function ArtistPage({ params }: Props) {
         <section className="section-padding bg-[#0a0a0a]">
           <div className="container-custom">
             <h2 className="font-cinzel font-bold text-2xl text-[#f5f5f5] mb-8">
-              {artist.name.split(' ')[0]}&apos;s <span className="gold-text">Work</span>
+              Portfolio
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {artistPortfolio.map((item) => (
-                <div key={item.id} className="relative rounded-xl overflow-hidden border border-[#2a2a2a] group aspect-square">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {artistPortfolio.map((item, index) => (
+                <div 
+                  key={item.id} 
+                  className="relative rounded-xl overflow-hidden border border-[#2a2a2a] group aspect-square cursor-pointer"
+                  onClick={() => setLightboxIndex(index)}
+                >
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    sizes="(max-width: 768px) 50vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                     unoptimized={item.image.startsWith('/uploads/')}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <p className="absolute bottom-3 left-3 text-white text-xs font-semibold font-cinzel opacity-0 group-hover:opacity-100 transition-opacity">{item.title}</p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center mb-2">
+                      <ZoomIn size={20} className="text-white" />
+                    </div>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p className="text-white text-xs font-semibold font-cinzel">{item.title}</p>
+                    <p className="text-[#c9a84c] text-xs font-inter">{item.category}</p>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
       )}
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {lightboxIndex !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="lightbox-overlay"
+            onClick={() => setLightboxIndex(null)}
+          >
+            <button
+              onClick={() => setLightboxIndex(null)}
+              className="absolute top-4 right-4 w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors z-10"
+            >
+              <X size={20} />
+            </button>
+            <button
+              onClick={(e) => { e.stopPropagation(); setLightboxIndex((i) => (i !== null && i > 0 ? i - 1 : artistPortfolio.length - 1)); }}
+              className="absolute left-4 w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors z-10"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <button
+              onClick={(e) => { e.stopPropagation(); setLightboxIndex((i) => (i !== null && i < artistPortfolio.length - 1 ? i + 1 : 0)); }}
+              className="absolute right-4 w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors z-10"
+            >
+              <ChevronRight size={20} />
+            </button>
+
+            <motion.div
+              key={lightboxIndex}
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="relative max-w-3xl max-h-[85vh] w-full mx-4"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="relative w-full" style={{ aspectRatio: `${artistPortfolio[lightboxIndex].width}/${artistPortfolio[lightboxIndex].height}`, maxHeight: '80vh' }}>
+                <Image
+                  src={artistPortfolio[lightboxIndex].image}
+                  alt={artistPortfolio[lightboxIndex].title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 768px"
+                  className="object-contain rounded-xl"
+                  priority
+                  unoptimized={artistPortfolio[lightboxIndex].image.startsWith('/uploads/')}
+                />
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-xl">
+                <p className="text-white font-semibold font-cinzel">{artistPortfolio[lightboxIndex].title}</p>
+                <p className="text-[#c9a84c] text-sm font-inter">{artistPortfolio[lightboxIndex].category}</p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <CTABanner />
     </>
