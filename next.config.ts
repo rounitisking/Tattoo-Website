@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
     ],
     localPatterns: [
       { pathname: '/uploads/**' },
+      { pathname: '/toWEBP/**' },
       { pathname: '/*.webp' },
     ],
     formats: ['image/webp', 'image/avif'],

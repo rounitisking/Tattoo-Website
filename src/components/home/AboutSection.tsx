@@ -5,10 +5,10 @@ import Image from 'next/image';
 import { PortfolioItem } from '@/types';
 
 const FALLBACK_IMAGES = [
-  'https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?w=400&q=75',
-  'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&q=75',
-  'https://images.unsplash.com/photo-1542856204-00101eb6def4?w=400&q=75',
-  'https://images.unsplash.com/photo-1562591229-7b18b44b07df?w=400&q=75',
+  '/toWEBP/WhatsApp Image 2026-07-20 at 11.42.55 (1).webp',
+  '/toWEBP/WhatsApp Image 2026-07-20 at 11.42.55 (2).webp',
+  '/toWEBP/WhatsApp Image 2026-07-20 at 11.42.56 (1).webp',
+  '/toWEBP/WhatsApp Image 2026-07-20 at 11.42.56.webp',
 ];
 
 export default function AboutSection() {

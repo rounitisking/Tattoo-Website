@@ -8,14 +8,14 @@ import { ChevronRight } from 'lucide-react';
 import { SITE_CONFIG } from '@/constants/site';
 
 const carouselImages = [
-  { src: '/homepageScrolling1.webp', alt: 'Ink Rise Tattoo Work 1' },
-  { src: '/homepageScrolling2webp.webp', alt: 'Ink Rise Tattoo Work 2' },
-  { src: '/homepageScrolling3webp.webp', alt: 'Ink Rise Tattoo Work 3' },
-  { src: '/homepageScrolling4.webp', alt: 'Ink Rise Tattoo Work 4' },
-  { src: '/homepageScrolling5.webp', alt: 'Ink Rise Tattoo Work 5' },
-  { src: '/homepageScrolling6.webp', alt: 'Ink Rise Tattoo Work 6' },
-  { src: '/homepageScrolling7webp.webp', alt: 'Ink Rise Tattoo Work 7' },
-  { src: '/homepageScrolling8.webp', alt: 'Ink Rise Tattoo Work 8' },
+  { src: '/toWEBP/WhatsApp Image 2026-07-20 at 11.43.00.webp', alt: 'Ink Rise Tattoo Work 1' },
+  { src: '/toWEBP/WhatsApp Image 2026-07-20 at 11.43.01 (1).webp', alt: 'Ink Rise Tattoo Work 2' },
+  { src: '/toWEBP/WhatsApp Image 2026-07-20 at 11.43.01 (2).webp', alt: 'Ink Rise Tattoo Work 3' },
+  { src: '/toWEBP/WhatsApp Image 2026-07-20 at 11.43.01.webp', alt: 'Ink Rise Tattoo Work 4' },
+  { src: '/toWEBP/WhatsApp Image 2026-07-20 at 11.43.02 (1).webp', alt: 'Ink Rise Tattoo Work 5' },
+  { src: '/toWEBP/WhatsApp Image 2026-07-20 at 11.43.02 (2).webp', alt: 'Ink Rise Tattoo Work 6' },
+  { src: '/toWEBP/WhatsApp Image 2026-07-20 at 11.43.02.webp', alt: 'Ink Rise Tattoo Work 7' },
+  { src: '/toWEBP/WhatsApp Image 2026-07-20 at 11.43.03 (1).webp', alt: 'Ink Rise Tattoo Work 8' },
 ];
 
 export default function HeroSection() {
@@ -37,7 +37,7 @@ export default function HeroSection() {
       <div className="w-full pt-16 lg:pt-[72px] xl:pt-20 shrink-0 relative z-20 border-b border-[#1f1f1f]">
         <div className="relative w-full h-[160px] md:h-[180px] lg:h-[200px]">
           <Image
-            src="/coverphoto.webp"
+            src="/toWEBP/WhatsApp Image 2026-07-20 at 11.42.55.webp"
             alt="Ink Rise Studio Cover"
             fill
             priority

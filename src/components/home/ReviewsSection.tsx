@@ -43,7 +43,7 @@ export default function ReviewsSection() {
 
   // Hardcode rating and count as requested
   const displayRating = '5.0';
-  const displayCount = 125;
+  const displayCount = 156;
 
   return (
     <section id="reviews" className="section-padding bg-[#0d0d0d]">
