@@ -37,7 +37,7 @@ export default function HeroSection() {
       <div className="w-full pt-16 lg:pt-[72px] xl:pt-20 shrink-0 relative z-20 border-b border-[#1f1f1f]">
         <div className="relative w-full h-[160px] md:h-[180px] lg:h-[200px]">
           <Image
-            src="/toWEBP/WhatsApp Image 2026-07-20 at 11.42.55.webp"
+            src="/logo.webp"
             alt="Ink Rise Studio Cover"
             fill
             priority

@@ -8,9 +8,7 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'assets.zyrosite.com' },
     ],
     localPatterns: [
-      { pathname: '/uploads/**' },
-      { pathname: '/toWEBP/**' },
-      { pathname: '/*.webp' },
+      { pathname: '/**' },
     ],
     formats: ['image/webp', 'image/avif'],
   },

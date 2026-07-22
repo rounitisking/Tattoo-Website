@@ -60,27 +60,7 @@ export default function Home() {
       {/* Cinematic Video Separator */}
       <VideoBanner />
 
-      {/* Portfolio Preview */}
-      <section className="section-padding bg-[#0a0a0a]">
-        <div className="container-custom">
-          <SectionHeader
-            label="Our Work"
-            title="Featured"
-            titleHighlight="Portfolio"
-            subtitle="A glimpse of the art we create. Each piece tells a unique story."
-          />
-          <PortfolioGrid />
-          <div className="text-center mt-10">
-            <Link
-              href="/portfolio"
-              className="inline-flex items-center gap-2 px-8 py-4 border-2 border-[#c9a84c] text-[#c9a84c] rounded-full font-bold text-sm hover:bg-[#c9a84c] hover:text-black transition-all duration-200 font-inter group"
-            >
-              View Full Portfolio
-              <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-        </div>
-      </section>
+
 
       <ArtistsSection />
       <ReviewsSection />
