@@ -39,13 +39,15 @@ export default function HeroSection() {
 
       {/* Cover Image Section */}
       <div className="w-full pt-16 lg:pt-[72px] xl:pt-20 shrink-0 relative z-20 border-b border-[#1f1f1f]">
-        <div className="relative w-full h-[160px] md:h-[180px] lg:h-[200px]">
+        <div className="relative w-full h-[220px] md:h-[240px] lg:h-[260px]">
+          {/* Original height: h-[160px] md:h-[180px] lg:h-[200px] */}
+          {/* Original scale: className="object-cover" */}
           <Image
             src="/logo.webp"
             alt="Ink Rise Studio Cover"
             fill
             priority
-            className="object-cover"
+            className="object-contain"
           />
         </div>
       </div>
