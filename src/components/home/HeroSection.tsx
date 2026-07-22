@@ -8,14 +8,18 @@ import { ChevronRight } from 'lucide-react';
 import { SITE_CONFIG } from '@/constants/site';
 
 const carouselImages = [
-  { src: '/toWEBP/WhatsApp Image 2026-07-20 at 11.43.00.webp', alt: 'Ink Rise Tattoo Work 1' },
-  { src: '/toWEBP/WhatsApp Image 2026-07-20 at 11.43.01 (1).webp', alt: 'Ink Rise Tattoo Work 2' },
-  { src: '/toWEBP/WhatsApp Image 2026-07-20 at 11.43.01 (2).webp', alt: 'Ink Rise Tattoo Work 3' },
-  { src: '/toWEBP/WhatsApp Image 2026-07-20 at 11.43.01.webp', alt: 'Ink Rise Tattoo Work 4' },
-  { src: '/toWEBP/WhatsApp Image 2026-07-20 at 11.43.02 (1).webp', alt: 'Ink Rise Tattoo Work 5' },
-  { src: '/toWEBP/WhatsApp Image 2026-07-20 at 11.43.02 (2).webp', alt: 'Ink Rise Tattoo Work 6' },
-  { src: '/toWEBP/WhatsApp Image 2026-07-20 at 11.43.02.webp', alt: 'Ink Rise Tattoo Work 7' },
-  { src: '/toWEBP/WhatsApp Image 2026-07-20 at 11.43.03 (1).webp', alt: 'Ink Rise Tattoo Work 8' },
+  { src: "/portrait tattoo/WhatsApp Image 2026-07-20 at 16.04.10.webp", alt: 'Ink Rise Tattoo Work 1' },
+  { src: "/geometric tattoo/WhatsApp Image 2026-07-20 at 11.43.01.webp", alt: 'Ink Rise Tattoo Work 2' },
+  { src: "/butterlfy tattoo/WhatsApp Image 2026-07-20 at 16.04.03.webp", alt: 'Ink Rise Tattoo Work 3' },
+  { src: "/animal tattoo/WhatsApp Image 2026-07-20 at 16.04.08.webp", alt: 'Ink Rise Tattoo Work 4' },
+  { src: "/spritual tattoo/WhatsApp Image 2026-07-20 at 11.43.08.webp", alt: 'Ink Rise Tattoo Work 5' },
+  { src: "/eagle tattoo/WhatsApp Image 2026-07-20 at 16.04.07 (1).webp", alt: 'Ink Rise Tattoo Work 6' },
+  { src: "/calligraphy tattoo/WhatsApp Image 2026-07-20 at 11.43.05 (1).webp", alt: 'Ink Rise Tattoo Work 7' },
+  { src: "/arm tattoo/WhatsApp Image 2026-07-20 at 16.04.02.webp", alt: 'Ink Rise Tattoo Work 8' },
+  { src: "/coverup tattoo/WhatsApp Image 2026-07-20 at 11.42.57 (2).webp", alt: 'Ink Rise Tattoo Work 9' },
+  { src: "/calligraphy tattoo/WhatsApp Image 2026-07-20 at 11.43.17 (2).webp", alt: 'Ink Rise Tattoo Work 10' },
+  { src: "/small tattoo/WhatsApp Image 2026-07-20 at 11.42.59.webp", alt: 'Ink Rise Tattoo Work 11' },
+  { src: "/color tattoo /WhatsApp Image 2026-07-20 at 16.04.06 (1).webp", alt: 'Ink Rise Tattoo Work 12' }
 ];
 
 export default function HeroSection() {
