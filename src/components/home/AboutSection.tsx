@@ -5,10 +5,10 @@ import Image from 'next/image';
 import { PortfolioItem } from '@/types';
 
 const FALLBACK_IMAGES = [
-  '/toWEBP/WhatsApp Image 2026-07-20 at 11.42.55 (1).webp',
-  '/toWEBP/WhatsApp Image 2026-07-20 at 11.42.55 (2).webp',
-  '/toWEBP/WhatsApp Image 2026-07-20 at 11.42.56 (1).webp',
-  '/toWEBP/WhatsApp Image 2026-07-20 at 11.42.56.webp',
+  '/animal tattoo/WhatsApp Image 2026-07-20 at 11.42.55 (1).webp',
+  '/butterlfy tattoo/WhatsApp Image 2026-07-20 at 11.42.55 (2).webp',
+  '/geometric tattoo/WhatsApp Image 2026-07-20 at 11.42.56 (1).webp',
+  '/geometric tattoo/WhatsApp Image 2026-07-20 at 11.42.56.webp',
 ];
 
 export default function AboutSection() {
