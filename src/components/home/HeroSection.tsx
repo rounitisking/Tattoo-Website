@@ -238,17 +238,17 @@ export default function HeroSection() {
         <div className="h-16 lg:h-[72px] xl:h-20 shrink-0 z-20" />
 
         {/* Hero content overlay aligned to the left, vertically centered */}
-        <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-12 lg:px-20 xl:px-28 flex-grow flex items-center">
-          <div className="max-w-[780px] text-left py-2">
+        <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-12 lg:px-20 xl:px-28 flex-grow flex items-center lg:items-center">
+          <div className="max-w-[92vw] sm:max-w-full lg:max-w-[920px] text-left flex flex-col gap-8 lg:block pt-8 pb-10">
             {/* Label / Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full px-3.5 py-1 mb-4"
+              className="inline-flex items-center gap-2 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full px-5 py-2 mb-6 sm:mb-8 lg:mb-10"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse" />
-              <span className="text-[#D4AF37] text-[11px] sm:text-xs font-semibold tracking-[0.2em] uppercase font-inter">
+              <span className="text-[#D4AF37] text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase font-inter">
                 Premium Tattoo Studio
               </span>
             </motion.div>
@@ -258,7 +258,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-inter font-black text-4xl sm:text-6xl lg:text-7xl xl:text-[80px] text-[#FFFFFF] mb-4 tracking-tight"
+              className="font-inter font-black text-[48px] xs:text-[56px] sm:text-6xl lg:text-8xl xl:text-[120px] text-[#FFFFFF] mb-5 lg:mb-10 tracking-tight"
               style={{ lineHeight: '1.02' }}
             >
               Where Skin
@@ -273,7 +273,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-[#C8C8C8] text-sm md:text-base lg:text-lg leading-relaxed mb-6 font-inter max-w-[580px]"
+              className="text-[#C8C8C8] text-[14px] sm:text-base lg:text-2xl leading-[1.6] lg:leading-[1.9] mb-12 lg:mb-12 font-inter max-w-[95%] lg:max-w-[760px]"
             >
               Premium tattoo artistry by world-class artists. Custom designs, hyper-realism, geometric
               masterpieces — every piece is a story etched in skin forever.
@@ -284,31 +284,31 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-wrap items-center justify-start gap-3 sm:gap-4 mb-6"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-3 lg:gap-8 mb-14 lg:mb-12 w-full"
             >
               <Link
                 href="/contact#contact"
-                className="px-6 sm:px-7 py-3 bg-[#D4AF37] text-[#050505] font-bold text-xs sm:text-sm rounded-[8px] hover:bg-[#F3E5AB] transition-colors font-inter tracking-wide flex items-center justify-center gap-1.5"
+                className="w-full sm:w-auto px-6 lg:px-12 py-4 lg:py-5 bg-[#D4AF37] text-[#050505] font-bold text-sm lg:text-lg rounded-[8px] hover:bg-[#F3E5AB] transition-colors font-inter tracking-wide flex items-center justify-center gap-1.5"
               >
                 Book Consultation <span className="font-normal ml-0.5">&gt;</span>
               </Link>
               <Link
                 href="/portfolio"
-                className="px-6 sm:px-7 py-3 bg-transparent border border-[#D4AF37] text-[#D4AF37] font-bold text-xs sm:text-sm rounded-[8px] hover:bg-[#D4AF37]/10 transition-colors font-inter tracking-wide text-center flex items-center justify-center gap-1.5"
+                className="w-full sm:w-auto px-6 sm:px-7 lg:px-7 py-4 sm:py-3 lg:py-3 bg-transparent border border-[#D4AF37] text-[#D4AF37] font-bold text-sm sm:text-sm rounded-[8px] hover:bg-[#D4AF37]/10 transition-colors font-inter tracking-wide text-center flex items-center justify-center gap-1.5"
               >
                 View Portfolio <span className="font-normal ml-0.5">&gt;</span>
               </Link>
               <Link
                 href="/contact#contact"
-                className="px-6 sm:px-7 py-3 bg-transparent border border-[#25D366] text-[#25D366] font-bold text-xs sm:text-sm rounded-[8px] hover:bg-[#25D366]/10 transition-colors font-inter tracking-wide flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-6 sm:px-7 lg:px-7 py-4 sm:py-3 lg:py-3 bg-transparent border border-[#25D366] text-[#25D366] font-bold text-sm sm:text-sm rounded-[8px] hover:bg-[#25D366]/10 transition-colors font-inter tracking-wide flex items-center justify-center gap-2"
               >
-                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
+                <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
                 Contact Us
               </Link>
             </motion.div>
 
             {/* Our Work section centered relative to the content block */}
-            <div className="flex items-center justify-center gap-3 text-center max-w-[380px]">
+            <div className="flex items-center justify-center gap-4 text-center w-full max-w-[420px] lg:max-w-[500px] mt-12 mx-auto sm:mx-0">
               <div className="h-[1px] bg-[#D4AF37]/45 flex-grow" />
               <span className="text-[#D4AF37] text-[11px] sm:text-xs font-inter tracking-[0.25em] uppercase font-bold">
                 Our Work
