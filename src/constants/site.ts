@@ -34,9 +34,9 @@ export const SITE_CONFIG = {
   mapLink: 'https://maps.app.goo.gl/bJ2euhbNBVVrPzz38',
   mapEmbedUrl:
     'https://maps.google.com/maps?q=28.642836,77.3409119&t=&z=15&ie=UTF8&iwloc=&output=embed',
-  instagram: 'https://www.instagram.com/ink_rise_tattoos?igsh=MTI0aGR0a29pYTg1aQ==',
-  facebook: 'https://www.instagram.com/ink_rise_tattoos?igsh=MTI0aGR0a29pYTg1aQ==',
-  youtube: 'https://www.instagram.com/ink_rise_tattoos?igsh=MTI0aGR0a29pYTg1aQ==',
+  instagram: 'https://www.instagram.com/ink_rise_tattoo?rpxt=eGQ2YXM4YW14cmh0&utm_source=qr',
+  facebook: 'https://www.instagram.com/ink_rise_tattoo?rpxt=eGQ2YXM4YW14cmh0&utm_source=qr',
+  youtube: 'https://www.instagram.com/ink_rise_tattoo?rpxt=eGQ2YXM4YW14cmh0&utm_source=qr',
   hours: 'Mon – Sun: 10:00 AM – 9:00 PM',
   googlePlaceId: GOOGLE_PLACE_ID,
   googleReviewLink,

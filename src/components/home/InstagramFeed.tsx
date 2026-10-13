@@ -55,7 +55,7 @@ export default function InstagramFeed() {
             className="flex items-center gap-2 px-6 py-3 bg-[#111111] border border-[#2a2a2a] hover:border-[#c9a84c] text-[#f5f5f5] rounded-full transition-all duration-300 group shadow-lg"
           >
             <Instagram size={18} className="text-[#c9a84c] group-hover:scale-110 transition-transform" />
-            <span className="font-semibold text-sm">@ink_rise_tattoos</span>
+            <span className="font-semibold text-sm">@ink_rise_tattoo</span>
           </a>
         </div>
 
